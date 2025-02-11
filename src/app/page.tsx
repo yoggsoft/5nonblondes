@@ -50,7 +50,7 @@ export default function Home() {
             <Image
               width={1920}
               height={1080}
-              className="w-full"
+              className="w-full backd"
               src={`/img/portraits/portrait7.jpg`}
               alt='5 Non Blondes'
             />
@@ -63,17 +63,13 @@ export default function Home() {
           <div className="container mx-auto px-2.5 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
             <div className="relative flex flex-col lg:max-w-md xl:max-w-2xl 2xl:max-w-4xl">
               <h2 className="font-bold text-6xl pb-6">About</h2>
-              <p>Bringing the party to BXL 
-                <a
-                  className="text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600"
-                  href="https://www.paninopanini.co.uk/"
-                  target="_blank"
-                  rel="noreferrer"
-                >Ut labore et</a>
-                  dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+              <p className='text-2xl pb-6'>
+                We are a lively party cover band, based in Brussels, who bring a burst of energy to every performance.
+                With a diverse mix of classic rock, pop, and dance hits from the 70, 80 90s and 00.
               </p>
-              <p className="pt-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<a className="text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600" href="https://www.paninopanini.co.uk/" target="_blank" rel="noreferrer">eiusmod tempor</a>. Chiudi un po’ la finestra, mezzogiorno in penombra, sfondo bianco e pulito, sfondo bianco e pulito.
+              <p className='text-2xl'>
+                We know how to get any crowd on their feet.
+                Whether it`s a wedding or a corporate event, their high-energy shows always create an unforgettable vibe.
               </p>
               <div className="flex pt-8 gap-4">
               <a
