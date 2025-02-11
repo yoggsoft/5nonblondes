@@ -26,20 +26,32 @@ export default function Home() {
             backdrop-blur-lg
           "
         >
-          <a className="hover:opacity-75 transition-opacity duration-350" href="#home">5NB</a>
-          <a className="hover:opacity-75 transition-opacity duration-350" href="#about">About</a>
+          <a
+            className="hover:opacity-75 transition-opacity duration-350"
+            href="#home">5NB
+          </a>
+          <a
+            className="hover:opacity-75 transition-opacity duration-350"
+            href="#about">About
+          </a>
           <a
             className="hover:opacity-75"
             href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
-          ><FaFacebookF size={36} /></a>
+          >
+            <FaFacebookF size={28} />
+          </a>
           <a
             className="hover:opacity-75"
             href="https://www.instagram.com/5nblondes"
-          ><FaInstagram size={36} /></a>
+          >
+            <FaInstagram size={28} />
+          </a>
           <a
             className="hover:opacity-75"
             href="https://www.tiktok.com/@5non.blondes"
-          ><FaTiktok size={36} /></a>
+          >
+            <FaTiktok size={28} />
+          </a>
         </nav>
       </header>
       <main>
@@ -48,7 +60,7 @@ export default function Home() {
             <Image
               width={1920}
               height={1080}
-              className="w-full backd"
+              className="w-full"
               src={`/img/portraits/portrait7.jpg`}
               alt='5 Non Blondes'
             />
@@ -118,7 +130,7 @@ export default function Home() {
               </a>
             </div>
             <a href="#home" className="text-2xl">
-              {(new Date).getFullYear()} - 5NB
+            5NB - {(new Date).getFullYear()}
             </a>
           </nav>
         </footer>
