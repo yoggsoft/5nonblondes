@@ -71,26 +71,6 @@ export default function Home() {
                 We know how to get any crowd on their feet.
                 Whether it`s a wedding or a corporate event, their high-energy shows always create an unforgettable vibe.
               </p>
-              <div className="flex pt-8 gap-4">
-                <a
-                  className="hover:opacity-75"
-                  href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
-                  >
-                  <FaFacebookF size={36} />
-                </a>
-                <a
-                  className="hover:opacity-75"
-                  href="https://www.instagram.com/5nblondes"
-                  >
-                  <FaInstagram size={36} />
-                </a>
-                <a
-                  className="hover:opacity-75"
-                  href="https://www.tiktok.com/@5non.blondes"
-                  >
-                  <FaTiktok size={36} />
-                </a>
-              </div>
             </div>
           </div>
           <Image
