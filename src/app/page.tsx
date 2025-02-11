@@ -31,15 +31,21 @@ export default function Home() {
           <a
             className="hover:opacity-75"
             href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
-          ><FaFacebookF size={36} /></a>
+          >
+            <FaFacebookF size={36} />
+          </a>
           <a
             className="hover:opacity-75"
             href="https://www.instagram.com/5nblondes"
-          ><FaInstagram size={36} /></a>
+          >
+            <FaInstagram size={36} />
+          </a>
           <a
             className="hover:opacity-75"
             href="https://www.tiktok.com/@5non.blondes"
-          ><FaTiktok size={36} /></a>
+          >
+            <FaTiktok size={36} />
+          </a>
         </nav>
       </header>
       <main>

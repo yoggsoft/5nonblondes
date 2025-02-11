@@ -23,6 +23,20 @@ export const metadata: Metadata = {
   }
 };
 
+const jsonLd = {
+  "@context": "http://schema.org",
+  "@type": "artist",
+  "name": "5 Non Blondes",
+  "url": "http://www.woorank.com",
+  "disambiguatingDescription": "Best party cover band in BXL",
+  "nationality": "Italian, Venezuelan",
+  "sameAs": [
+    "https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about",
+    "https://www.tiktok.com/@5non.blondes",
+    "https://www.instagram.com/5nblondes"
+  ]
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,6 +44,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="url" content="http://www.5nonblondes.com" />
+        <meta itemProp="url" content="http://www.5nonblondes.com" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      </head>
       <body>
         {children}
       </body>
