@@ -1,101 +1,154 @@
 import Image from "next/image";
+import { FaTiktok, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+    <div>
+      <header>
+        <nav
+          aria-label="header"
+          className="
+            fixed
+            h-20
+            flex
+            items-center
+            w-full
+            justify-center
+            gap-4
+            sm:gap-8
+            md:gap-10
+            lg:gap-16
+            xl:gap-20
+            font-bold
+            text-2xl
+            transition-all
+            duration-200
+            backdrop-blur-lg
+          "
+        >
+          <a className="hover:opacity-75 transition-opacity duration-350" href="#home">Home</a>
+          <a className="hover:opacity-75 transition-opacity duration-350" href="#tour">Tour</a>
+          <a className="hover:opacity-75 transition-opacity duration-350" href="#about">About</a>
+          <a className="hover:opacity-75 transition-opacity duration-350" href="#media">Media</a>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+            className="hover:opacity-75"
+            href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
+          ><FaFacebookF size={36} /></a>
+          <a
+            className="hover:opacity-75"
+            href="https://www.instagram.com/5nblondes"
+          ><FaInstagram size={36} /></a>
+          <a
+            className="hover:opacity-75"
+            href="https://www.tiktok.com/@5non.blondes"
+          ><FaTiktok size={36} /></a>
+        </nav>
+      </header>
+      <main>
+        <section id="home" className="hero">
+          <div>
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              width={1920}
+              height={1080}
+              className="w-full"
+              src={`/img/portraits/portrait7.jpg`}
+              alt='5 Non Blondes'
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+        </section>
+        <section
+          id="about"
+          className="relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56"
+        >
+          <div className="container mx-auto px-2.5 lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+            <div className="relative flex flex-col lg:max-w-md xl:max-w-2xl 2xl:max-w-4xl">
+              <h2 className="font-bold text-6xl pb-6">About</h2>
+              <p>Bringing the party to BXL 
+                <a
+                  className="text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600"
+                  href="https://www.paninopanini.co.uk/"
+                  target="_blank"
+                  rel="noreferrer"
+                >Ut labore et</a>
+                  dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+              </p>
+              <p className="pt-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do<a className="text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600" href="https://www.paninopanini.co.uk/" target="_blank" rel="noreferrer">eiusmod tempor</a>. Chiudi un po’ la finestra, mezzogiorno in penombra, sfondo bianco e pulito, sfondo bianco e pulito.
+              </p>
+              <div className="flex pt-8 gap-4">
+              <a
+                className="hover:opacity-75"
+                href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
+                >
+                <FaFacebookF size={36} />
+              </a>
+              <a
+                className="hover:opacity-75"
+                href="https://www.instagram.com/5nblondes"
+                >
+                <FaInstagram size={36} />
+              </a>
+              <a
+                className="hover:opacity-75"
+                href="https://www.tiktok.com/@5non.blondes"
+                >
+                <FaTiktok size={36} />
+              </a>
+            </div>
+          </div>
         </div>
+            <Image
+              alt="Holding guitar"
+              loading="lazy"
+              width="750"
+              height="533"
+              decoding="async"
+              data-nimg="1"
+              className="w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl text-transparent"
+              src={'/img/portraits/portrait1.jpg'}
+            />
+        </section>
+        <section className="projects relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56">
+          <div className="">
+          <Image
+            width={1920}
+            height={1080}
+            className="w-full"
+            src={'/img/portraits/portrait2.jpg'} alt='5 Non Blondes'
+          />
+          </div>
+        </section>
+        <footer>
+          <nav
+            aria-label="footer"
+            className="h-60 w-full flex justify-center items-center flex-col gap-4"
+          >
+            <div className="flex gap-4">
+              <a
+                className="hover:opacity-75"
+                href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
+                >
+                <FaFacebookF size={30} />
+              </a>
+              <a
+                className="hover:opacity-75"
+                href="https://www.instagram.com/5nblondes"
+                >
+                <FaInstagram size={30} />
+              </a>
+              <a
+                className="hover:opacity-75"
+                href="https://www.tiktok.com/@5non.blondes"
+                >
+                <FaTiktok size={30} />
+              </a>
+            </div>
+            <a href="#home" className="text-2xl">
+              {(new Date).getFullYear()} - 5NB
+            </a>
+          </nav>
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
