@@ -72,46 +72,46 @@ export default function Home() {
                 Whether it`s a wedding or a corporate event, their high-energy shows always create an unforgettable vibe.
               </p>
               <div className="flex pt-8 gap-4">
-              <a
-                className="hover:opacity-75"
-                href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
-                >
-                <FaFacebookF size={36} />
-              </a>
-              <a
-                className="hover:opacity-75"
-                href="https://www.instagram.com/5nblondes"
-                >
-                <FaInstagram size={36} />
-              </a>
-              <a
-                className="hover:opacity-75"
-                href="https://www.tiktok.com/@5non.blondes"
-                >
-                <FaTiktok size={36} />
-              </a>
+                <a
+                  className="hover:opacity-75"
+                  href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
+                  >
+                  <FaFacebookF size={36} />
+                </a>
+                <a
+                  className="hover:opacity-75"
+                  href="https://www.instagram.com/5nblondes"
+                  >
+                  <FaInstagram size={36} />
+                </a>
+                <a
+                  className="hover:opacity-75"
+                  href="https://www.tiktok.com/@5non.blondes"
+                  >
+                  <FaTiktok size={36} />
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-            <Image
-              alt="Holding guitar"
-              loading="lazy"
-              width="750"
-              height="533"
-              decoding="async"
-              data-nimg="1"
-              className="w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl text-transparent"
-              src={'/img/portraits/portrait1.jpg'}
-            />
+          <Image
+            alt="Holding guitar"
+            loading="lazy"
+            width="750"
+            height="533"
+            decoding="async"
+            data-nimg="1"
+            className="w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl text-transparent"
+            src={'/img/portraits/portrait1.jpg'}
+          />
         </section>
         <section className="projects relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56">
           <div className="">
-          <Image
-            width={1920}
-            height={1080}
-            className="w-full"
-            src={'/img/portraits/portrait2.jpg'} alt='5 Non Blondes'
-          />
+            <Image
+              width={1920}
+              height={1080}
+              className="w-full"
+              src={'/img/portraits/portrait2.jpg'} alt='5 Non Blondes'
+            />
           </div>
         </section>
         <footer>
