@@ -4,11 +4,11 @@ import { FaTiktok, FaInstagram, FaFacebookF } from "react-icons/fa";
 export default function Home() {
   return (
     <div>
-      <header>
+      <header className="container">
         <nav
           aria-label="header"
           className="
-            fixed
+            absolute
             h-20
             flex
             items-center
@@ -26,10 +26,8 @@ export default function Home() {
             backdrop-blur-lg
           "
         >
-          <a className="hover:opacity-75 transition-opacity duration-350" href="#home">Home</a>
-          <a className="hover:opacity-75 transition-opacity duration-350" href="#tour">Tour</a>
+          <a className="hover:opacity-75 transition-opacity duration-350" href="#home">5NB</a>
           <a className="hover:opacity-75 transition-opacity duration-350" href="#about">About</a>
-          <a className="hover:opacity-75 transition-opacity duration-350" href="#media">Media</a>
           <a
             className="hover:opacity-75"
             href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
