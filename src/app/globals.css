@@ -4,13 +4,34 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
+@layer utilities {
+	.font-rendering {
+		font-synthesis: none;
+		text-rendering: optimizeLegibility;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
+
+	/* Element before intersection */
+	.reveal {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+		transition: opacity 0.8s, transform 0.8s;
+	}
+
+	/* Element after intersection */
+	.reveal.visible {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
 }

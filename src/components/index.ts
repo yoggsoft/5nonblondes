@@ -1,0 +1,12 @@
+export { default as About } from '@/components/About';
+export { default as BackToTop } from '@/components/BackToTop';
+export { default as BandIdentity } from '@/components/BandIdentity';
+export { default as ContactUs } from '@/components/ContactUs';
+export { default as Footer } from '@/components/Footer';
+export { default as Intro } from '@/components/Intro';
+export { default as IntroTourDates } from '@/components/IntroTourDates';
+export { default as Listen } from '@/components/Listen';
+export { default as PhotoGallery } from '@/components/PhotoGallery';
+export { default as Shows } from '@/components/Shows';
+export { default as TextParallax } from '@/components/TextParallax';
+export { default as TourDates } from '@/components/TourDates';
