@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "5 Non Blondes - Official Website",
-  description: "Probably the best party band in BXL",
+  title: "5 Non Blondes ........ The best party band in BXL",
+  description: "The 5 Non Blondes are the most celebrated DISCO PARTY band in Brussels.",
   openGraph: {
     siteName: "5NB - 5NonBlondes",
-    title: "5 Non Blondes - Official Website",
+    title: "The most celebrated Party Band ................................................. the DISCO BAND for festivals, high end events, PAC, Casinos, etc.. - 5 Non Blondes",
     url: "http://www.5nonblondes.com",
     type: "website",
-    description: "Probably the best party band in BXL - Official Website",
+    description: "The 5 Non Blondes are the most celebrated DISCO PARTY band in Brussels.",
     locale: "en_US",
     images: "/img/portraits/portrait1.jpg"
   },
@@ -25,11 +25,10 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "http://schema.org",
-  "@type": "artist",
-  "name": "5 Non Blondes",
-  "url": "http://www.woorank.com",
+  "@type": "WebSite",
+  "name": "The most celebrated Party Band ................................................. the DISCO BAND for festivals, high end events, PAC, Casinos, etc.. - 5 Non Blondes",
+  "url": "http://www.5nonblondes.com",
   "disambiguatingDescription": "Best party cover band in BXL",
-  "nationality": "Italian, Venezuelan",
   "sameAs": [
     "https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about",
     "https://www.tiktok.com/@5non.blondes",

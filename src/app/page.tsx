@@ -139,7 +139,7 @@ export default function Home() {
               </a>
             </div>
             <a href="#home" className="text-2xl">
-            5NB - {(new Date).getFullYear()}
+              5NB - {(new Date).getFullYear()}
             </a>
           </nav>
         </footer>
