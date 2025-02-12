@@ -28,26 +28,31 @@ export default function Home() {
         >
           <a
             className="hover:opacity-75 transition-opacity duration-350"
+            aria-label="Home"
             href="#home">5NB
           </a>
           <a
             className="hover:opacity-75 transition-opacity duration-350"
+            aria-label="About"
             href="#about">About
           </a>
           <a
             className="hover:opacity-75"
+            aria-label="Facebook"
             href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
           >
             <FaFacebookF size={28} />
           </a>
           <a
             className="hover:opacity-75"
+            aria-label="Instagram"
             href="https://www.instagram.com/5nblondes"
           >
             <FaInstagram size={28} />
           </a>
           <a
             className="hover:opacity-75"
+            aria-label="Tiktok"
             href="https://www.tiktok.com/@5non.blondes"
           >
             <FaTiktok size={28} />
@@ -100,7 +105,8 @@ export default function Home() {
               width={1920}
               height={1080}
               className="w-full"
-              src={'/img/portraits/portrait2.jpg'} alt='5 Non Blondes'
+              src={'/img/portraits/portrait2.jpg'}
+              alt='5 Non Blondes'
             />
           </div>
         </section>
@@ -112,18 +118,21 @@ export default function Home() {
             <div className="flex gap-4">
               <a
                 className="hover:opacity-75"
+                aria-label="Facebook"
                 href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
                 >
                 <FaFacebookF size={30} />
               </a>
               <a
                 className="hover:opacity-75"
+                aria-label="Instagram"
                 href="https://www.instagram.com/5nblondes"
                 >
                 <FaInstagram size={30} />
               </a>
               <a
                 className="hover:opacity-75"
+                aria-label="Tiktok"
                 href="https://www.tiktok.com/@5non.blondes"
                 >
                 <FaTiktok size={30} />
