@@ -6,7 +6,7 @@ export default function robots (): MetadataRoute.Robots {
 			{
 				userAgent: '*',
 				allow: '/',
-				disallow: ['/css', 'privacy']
+				disallow: ['/css']
 			}
 		],
 		sitemap: `https://www.5nonblondes.com/sitemap.xml`
