@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { ScrollTo, ButtonPrimary } from '@/common';
+import { ScrollTo, ButtonPrimary } from '@/components';
 
 import { FaGithub as Github, FaMapMarkerAlt as MapMapper } from 'react-icons/fa';
 

@@ -1,4 +1,4 @@
-import { ButtonPrimary } from '@/common';
+import { ButtonPrimary } from '@/components';
 
 const tourDates = [
   {

@@ -1,6 +1,6 @@
 'use client';
 
-import { ButtonPrimary } from '@/common';
+import { ButtonPrimary } from '@/components';
 import { FormEvent } from 'react';
 
 export default function SubscribeForm() {

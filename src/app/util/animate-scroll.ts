@@ -16,9 +16,9 @@ export function animateScroll({
   initialPosition: number,
   duration: number
 }) {
-  let start;
+  let start: number;
   let position;
-  let animationFrame;
+  let animationFrame: number;
 
   const requestAnimationFrame = window.requestAnimationFrame;
   const cancelAnimationFrame = window.cancelAnimationFrame;
@@ -28,7 +28,7 @@ export function animateScroll({
 
   const amountOfPixelsToScroll = initialPosition - targetPosition;
 
-  function step(timestamp) {
+  function step(timestamp: Date) {
     if (start === undefined) {
       start = timestamp;
     }

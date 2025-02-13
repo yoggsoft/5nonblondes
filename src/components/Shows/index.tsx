@@ -3,44 +3,47 @@
 import { useRef, useEffect, useState } from 'react';
 import { useInView } from 'framer-motion';
 
-import { Container } from '@/common';
-import { TourDates } from '@/components';
+import { Container, TourDates } from '@/components';
 
 import { FaAngleDown as ArrowBottom } from 'react-icons/fa';
 
 export default function Shows() {
-  const [isScrollMoreVisible, setIsScrollMoreVisible] = useState(true);
-  const showsContainerRef = useRef(null);
-  const scrollableDivRef = useRef(null);
+  const [isScrollMoreVisible, setIsScrollMoreVisible] = useState<boolean>(true);
+  const showsContainerRef = useRef<HTMLDivElement | null>(null);
+  const scrollableDivRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(showsContainerRef, { once: true });
 
   const clickHandler = () => {
-    scrollableDivRef.current.scrollTo({
-      top: scrollableDivRef.current.scrollTop + scrollableDivRef.current.offsetHeight,
-      behavior: 'smooth',
-    });
+    if (scrollableDivRef.current) {
+      scrollableDivRef.current.scrollTo({
+        top: scrollableDivRef?.current.scrollTop + scrollableDivRef.current.offsetHeight,
+        behavior: 'smooth',
+      });
+    }
   };
 
   useEffect(() => {
-    const scrollableDiv = scrollableDivRef.current;
-    const handleScroll = () => {
-      if (
-        scrollableDiv.scrollTop +
-          scrollableDiv.offsetHeight +
-          scrollableDivRef.current.childNodes[0].children[0].offsetHeight >=
-        scrollableDiv.scrollHeight
-      ) {
-        setIsScrollMoreVisible(false);
-      } else {
-        setIsScrollMoreVisible(true);
-      }
-    };
+    if (scrollableDivRef.current) {
+      const scrollableDiv = scrollableDivRef.current;
 
-    scrollableDiv.addEventListener('scroll', handleScroll);
-
-    return () => {
-      scrollableDiv.removeEventListener('scroll', handleScroll);
-    };
+      const handleScroll = () => {
+        if (
+          scrollableDiv?.scrollTop +
+          scrollableDiv?.offsetHeight +
+          scrollableDiv.childNodes[0].children[0].offsetHeight >= scrollableDiv.scrollHeight
+        ) {
+          setIsScrollMoreVisible(false);
+        } else {
+          setIsScrollMoreVisible(true);
+        }
+      };
+      
+      scrollableDiv.addEventListener('scroll', handleScroll);
+      
+      return () => {
+        scrollableDiv.removeEventListener('scroll', handleScroll);
+      };
+    }
   }, [scrollableDivRef]);
 
   return (

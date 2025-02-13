@@ -38,7 +38,7 @@ const Slide = ({
 const Phrase = () => {
   return (
     <div>
-      <p className='text-[5rem] leading-none overflow-hidden uppercase font-bold text-white'>5 NON BLONDES -</p>
+      <p className='font-permanentMarker text-[5rem] leading-none overflow-hidden uppercase font-bold text-white'>5 NON BLONDES - THE BEST PARTY BAND IN BXL</p>
     </div>
   );
 };

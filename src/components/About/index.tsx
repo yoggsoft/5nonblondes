@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { Container } from '@/common';
-import { FaTiktok, FaInstagram } from 'react-icons/fa';
+import { Container } from '@/components';
+import { FaTiktok, FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 
 export default function About() {
   const textRef = useRef(null);
@@ -26,44 +26,48 @@ export default function About() {
           }}>
           <div className='overflow-hidden'>
             <h2
-              className={`font-bold text-6xl pb-6 translate-y-20 ${
+              className={`font-bold text-6xl pb-6 translate-y-20 text-white font-permanentMarker ${
                 isInView ? 'animate-slideUp' : ''
               }`}>
               About
             </h2>
           </div>
 
-          <p className='text-2xl pb-6'>
-            We are a lively party cover band, based in <strong className='text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600'>
+          <p className='text-3xl pb-6 text-white'>
+            We are a lively party cover band, based in <strong className='text-fuchsia-500 btn-primary no-underline underline-offset-4 hover:text-fuchsia-600'>
               Brussels
             </strong>, who bring a burst of energy to every performance.
             With a diverse mix of classic rock, pop, and dance hits from the 70, 80 90s and 00.
           </p>
-          <p className='text-2xl'>
-            We know how to get any crowd on their feet.
-            Whether it`s a wedding or a corporate event, their high-energy shows always create an unforgettable vibe.
-          </p>
-          <div className='flex pt-8 gap-4'>
+          
+          <div className='flex pt-8 gap-4 items-center'>
             <a
-              className="hover:opacity-75"
+              className="hover:opacity-75 text-white"
               href="https://www.instagram.com/5nblondes"
               aria-label="Follow 5 Non Blondes on Facebook"
             >
-              <FaInstagram size={28} />
+              <FaFacebookSquare size={36} />
             </a>
             <a
-              className="hover:opacity-75"
+              className="hover:opacity-75 text-white"
               href="https://www.tiktok.com/@5non.blondes"
               aria-label="Follow 5 Non Blondes on TikTok"
             >
-              <FaTiktok size={28} />
+              <FaTiktok size={30} />
+            </a>
+            <a
+              className="hover:opacity-75 text-white"
+              href="https://www.instagram.com/5nblondes"
+              aria-label="Follow 5 Non Blondes on Instagram"
+            >
+              <FaInstagram size={36} />
             </a>
           </div>
         </div>
       </Container>
       <Image
-        className='w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl'
-        src='/img/portraits/portrait3.jpg'
+        className='w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
+        src='/img/portraits/portrait2.jpg'
         width={750}
         height={533}
         alt='Holding guitar'

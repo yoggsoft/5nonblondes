@@ -4,18 +4,17 @@ import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
 import CookieConsent from 'react-cookie-consent';
 
-import { Container } from '@/common';
-
 import {
+  Container,
   BandIdentity,
   IntroTourDates,
   BackToTop
 } from '@/components';
 
-// const observerOptions = {
-//   rootMargin: '0px',
-//   threshold: 0,
-// };
+const observerOptions = {
+  rootMargin: '0px',
+  threshold: 0,
+};
 
 export default function Intro() {
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
@@ -34,7 +33,20 @@ export default function Intro() {
   return (
     <section
       id='intro'
-      className='relative flex flex-col items-center h-[100svh] w-full overflow-hidden max-h-[93rem] min-h-[43rem] lg:h-screen lg:flex-row lg:justify-start'
+      className='
+        relative
+        flex
+        flex-col
+        items-center
+        h-[100svh]
+        w-full
+        overflow-hidden
+        max-h-[93rem]
+        min-h-[43rem]
+        lg:h-screen
+        lg:flex-row
+        lg:justify-start
+      '
       ref={sectionRef}>
       <BandIdentity />
       <div className='absolute w-full h-full top-0 left-0'>
@@ -44,7 +56,7 @@ export default function Intro() {
           autoPlay
           muted
           loop
-          poster='/img/portraits/portrait1.jpg'
+          poster='/img/portraits/portrait7.jpg'
           className='object-cover w-full h-full z-10'
           playsInline>
           <source src='./video-band.webm' type='video/webm' />
@@ -55,9 +67,9 @@ export default function Intro() {
           </p>
         </video>
       </div>
-      <Container customClasses='flex flex-col justify-center items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:justify-end lg:items-end'>
+      {/* <Container customClasses='flex flex-col justify-center items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:justify-end lg:items-end'>
         <IntroTourDates />
-      </Container>
+      </Container> */}
       <BackToTop customClasses={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
       <CookieConsent
         disableStyles={true}

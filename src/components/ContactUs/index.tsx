@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import Image from 'next/image';
 
-import { Container } from '@/common';
+import { Container } from '@/components';
 
 export default function ContactUs() {
   const textRef = useRef(null);
@@ -13,11 +13,11 @@ export default function ContactUs() {
   return (
     <section
       id='contacts'
-      className='relative flex flex-col-reverse items-center w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 lg:flex-row'
+      className='relative text-white flex flex-col-reverse items-center w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 lg:flex-row'
     >
       <Image
-        className='mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-xl'
-        src='/contacts.jpg'
+        className='mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
+        src='/img/2024_10_19_Bruxelles_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.jpg'
         width={750}
         height={533}
         alt='Band playing'
@@ -34,7 +34,7 @@ export default function ContactUs() {
           <div className='flex flex-col max-w-4xl lg:text-right'>
             <div className='overflow-hidden'>
               <h2
-                className={`font-bold text-6xl pb-6 translate-y-24 ${
+                className={`font-bold text-6xl pb-6 translate-y-24 font-permanentMarker ${
                   isInView ? 'animate-slideUp' : ''
                 }`}>
                 Contact us
@@ -43,7 +43,7 @@ export default function ContactUs() {
             <p>
               And get us a drink in case you around. <br></br>Email us at{' '}
               <a
-                className='text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600'
+                className='text-fuchsia-800 underline underline-offset-4 hover:opacity-75'
                 href='https://www.paninopanini.co.uk/'
                 target='_blank'
                 rel='noreferrer'>

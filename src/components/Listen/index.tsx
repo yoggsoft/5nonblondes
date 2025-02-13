@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { Container } from '@/common';
+import { Container } from '@/components';
 import {
   FaSpotify as Spotify,
   FaSoundcloud as SoundCloud,
