@@ -16,7 +16,7 @@ export function animateScroll({
   initialPosition: number,
   duration: number
 }) {
-  let start = 0;
+  let start;
   let position;
   let animationFrame;
 

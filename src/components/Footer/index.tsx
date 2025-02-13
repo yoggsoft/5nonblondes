@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
           </Container>
         </div>
-        <div className='bg-fluo-green pt-3 relative z-[100]'>
+        <div className='bg-fuchsia-400 pt-3 relative z-[100]'>
           <Container customClasses='flex justify-between items-center'>
             <Image className='max-w-[10rem] lg:max-w-[15rem] h-auto' src='/logo-landscape.png' width={815} height={144} alt='Footer logo' />
             <div className='flex gap-3 md:gap-4'>
@@ -38,13 +38,18 @@ export default function Footer() {
               </svg>
             </div>
           </Container>
-          <div className='bg-black text-white mt-2 py-2'>
+          <div className='bg-black text-fuchsia-400 mt-2 py-2'>
             <p className='text-[0.7rem] text-center leading-tight mb-1'>
-              Website powered by{' '}
-              <a className='text-yellow-btn-primary underline underline-offset-4 hover:text-yellow-600' href='https://www.paninopanini.co.uk/' target='_blank' rel='noreferrer'>
-                Panino Panini
-              </a>{' '}
-              😎
+              Made by{' '}
+              <a
+                className='text-fuchsia-600 underline underline-offset-4 hover:text-fuchsia-300'
+                href='https://www.manuelreyes.dev/'
+                target='_blank'
+                rel='referrer'
+                aria-label='Manuel Reyes'
+              >
+                manuelreyes
+              </a>
             </p>
           </div>
         </div>

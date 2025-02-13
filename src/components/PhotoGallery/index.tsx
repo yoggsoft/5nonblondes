@@ -11,10 +11,10 @@ import { FaMapMarkerAlt as MapMapper, FaCalendarAlt as Calendar } from 'react-ic
 const galleryThumbnails = [
   {
     id: 1,
-    src: '/gallery/thumbnails/thumbnail-1.jpg',
+    src: '/img/portraits/portrait1.jpg',
     club: 'The Golden Eagle.',
-    city: 'Miami',
-    date: '12/2/2021',
+    city: 'Brussels',
+    date: '22/06/2023',
     slides: [
       { src: '/gallery/slider-images/slider-1.jpg' },
       { src: '/gallery/slider-images/slider-2.jpg' },
@@ -23,19 +23,19 @@ const galleryThumbnails = [
   },
   {
     id: 2,
-    src: '/gallery/thumbnails/thumbnail-2.jpg',
-    club: 'The Silver Elephant.',
-    city: 'Atlanta',
-    date: '23/6/2019',
-    slides: [
-      { src: '/gallery/slider-images/slider-4.jpg' },
-      { src: '/gallery/slider-images/slider-5.jpg' },
-      { src: '/gallery/slider-images/slider-6.jpg' },
-    ],
+    src: '/img/portraits/portrait2.jpg',
+    club: 'Kamea',
+    city: 'Brussels',
+    date: '15/07/2023',
+    // slides: [
+    //   { src: '/gallery/slider-images/slider-4.jpg' },
+    //   { src: '/gallery/slider-images/slider-5.jpg' },
+    //   { src: '/gallery/slider-images/slider-6.jpg' },
+    // ],
   },
   {
     id: 3,
-    src: '/gallery/thumbnails/thumbnail-3.jpg',
+    src: '/img/portraits/portrait3.jpg',
     club: 'The Electric Fox.',
     city: 'Los Angeles',
     date: '11/3/2019',
@@ -47,7 +47,7 @@ const galleryThumbnails = [
   },
   {
     id: 4,
-    src: '/gallery/thumbnails/thumbnail-4.jpg',
+    src: '/img/portraits/portrait4.jpg',
     club: 'The Cool Mouse.',
     city: 'New York',
     date: '03/12/2018',
@@ -59,7 +59,7 @@ const galleryThumbnails = [
   },
   {
     id: 5,
-    src: '/gallery/thumbnails/thumbnail-5.jpg',
+    src: '/img/portraits/portrait5.jpg',
     club: 'The Super Cat.',
     city: 'Rome',
     date: '03/03/2018',
@@ -71,7 +71,7 @@ const galleryThumbnails = [
   },
   {
     id: 6,
-    src: '/gallery/thumbnails/thumbnail-6.jpg',
+    src: '/img/portraits/portrait6.jpg',
     club: 'The Brave Salmon.',
     city: 'Berlin',
     date: '25/12/2017',
@@ -89,7 +89,7 @@ export default function PhotoGallery() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
 
-  const clickHandler = (index) => {
+  const clickHandler = (index: number) => {
     setOpenGallery(true);
     setGalleryIndex(index);
   };
@@ -118,7 +118,7 @@ export default function PhotoGallery() {
           {galleryThumbnails.map((item, index) => {
             return (
               <div className='flex flex-col mb-5 leading-none' key={item.id}>
-                <div className='w-full h-full rounded-lg bg-fluo-green transition-all'>
+                <div className='w-full h-full rounded-lg bg-fuchsia-400 transition-all'>
                   <Image
                     className='rounded-lg cursor-pointer hover:opacity-60 transition-all'
                     src={item.src}

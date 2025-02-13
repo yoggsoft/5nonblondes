@@ -6,6 +6,7 @@ import {
   TextParallax,
   Shows,
   PhotoGallery,
+  Footer
 } from '@/components';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <ContactUs />
         <TextParallax />
         <PhotoGallery />
+        <Footer />
       </main>
     </>
   );

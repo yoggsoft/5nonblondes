@@ -1,9 +1,10 @@
 'use client';
 
 import { ButtonPrimary } from '@/common';
+import { FormEvent } from 'react';
 
 export default function SubscribeForm() {
-  const formHandler = (event) => {
+  const formHandler = (event: FormEvent) => {
     event.preventDefault();
     console.log('form submitted!');
   };

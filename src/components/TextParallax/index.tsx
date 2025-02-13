@@ -5,7 +5,9 @@ import {
   motion,
   useScroll,
   useTransform,
-  useInView, MotionValue } from 'framer-motion';
+  useInView,
+  MotionValue
+} from 'framer-motion';
 
 const Slide = ({
   left,
@@ -36,7 +38,7 @@ const Slide = ({
 const Phrase = () => {
   return (
     <div>
-      <p className='text-[5rem] leading-none overflow-hidden uppercase font-bold'>5NB -</p>
+      <p className='text-[5rem] leading-none overflow-hidden uppercase font-bold text-white'>5 NON BLONDES -</p>
     </div>
   );
 };

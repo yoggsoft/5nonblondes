@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ww.5nonblondes.com'),
   title: '5 Non Blondes ........ The best party band in BXL',
   description: 'The 5 Non Blondes are the most celebrated DISCO PARTY band in Brussels.',
   openGraph: {

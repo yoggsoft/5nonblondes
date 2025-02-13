@@ -25,7 +25,7 @@ export default function Listen() {
             opacity: isInView ? 1 : 0,
             transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
           }}>
-          <p>Listen to the new album:</p>
+          {/* <p>Listen to the new album:</p>
           <div className='overflow-hidden'>
             <h2
               className={`font-bold text-6xl pb-6 translate-y-36 md:translate-y-24 ${
@@ -33,7 +33,7 @@ export default function Listen() {
               }`}>
               Panic in the room
             </h2>
-          </div>
+          </div> */}
           <p>
             Dovrebbero seguire le mie voglie, la sera appena alzato, o tardi la mattina dopo la
             colazione, prima d&#8217;addormentarmi.
