@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react';
 
 export function useIsIntersecting({
-  options, elementRef, keepWatching, callback, callbackRef}: {
+  options,
+  elementRef,
+  keepWatching,
+  callback,
+  callbackRef
+}: {
   options: Record<string, string>,
-  elementRef: HTMLDivElement,
+  elementRef: React.RefObject<HTMLElement>,
   keepWatching: boolean,
   callback: (arg:HTMLDivElement) => void,
   callbackRef: HTMLDivElement

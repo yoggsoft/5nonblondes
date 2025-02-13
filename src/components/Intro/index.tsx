@@ -5,16 +5,14 @@ import { useInView } from 'framer-motion';
 import CookieConsent from 'react-cookie-consent';
 
 import {
-  Container,
   BandIdentity,
-  IntroTourDates,
   BackToTop
 } from '@/components';
 
-const observerOptions = {
-  rootMargin: '0px',
-  threshold: 0,
-};
+// const observerOptions = {
+//   rootMargin: '0px',
+//   threshold: 0,
+// };
 
 export default function Intro() {
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);

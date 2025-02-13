@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
-import { Container, ButtonPrimary, ScrollTo } from '@/components';
+import { Container, ScrollTo } from '@/components';
 import { FaInstagram, FaTiktok, FaFacebookSquare } from 'react-icons/fa';
+
 export default function BandIdentity() {
   return (
     <>

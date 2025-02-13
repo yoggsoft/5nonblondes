@@ -6,10 +6,10 @@ import { ScrollTo, ButtonPrimary } from '@/components';
 
 import { FaGithub as Github, FaMapMarkerAlt as MapMapper } from 'react-icons/fa';
 
-const observerOptions = {
-  rootMargin: '0px',
-  threshold: 0.3,
-};
+// const observerOptions = {
+//   rootMargin: '0px',
+//   threshold: 0.3,
+// };
 
 const tourDates = [
   {

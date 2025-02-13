@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from 'react';
 import { useInView } from 'framer-motion';
 
 import { Container, TourDates } from '@/components';
-
 import { FaAngleDown as ArrowBottom } from 'react-icons/fa';
 
 export default function Shows() {
@@ -16,7 +15,7 @@ export default function Shows() {
   const clickHandler = () => {
     if (scrollableDivRef.current) {
       scrollableDivRef.current.scrollTo({
-        top: scrollableDivRef?.current.scrollTop + scrollableDivRef.current.offsetHeight,
+        top: scrollableDivRef.current.scrollTop + scrollableDivRef.current.offsetHeight,
         behavior: 'smooth',
       });
     }
@@ -28,23 +27,24 @@ export default function Shows() {
 
       const handleScroll = () => {
         if (
-          scrollableDiv?.scrollTop +
-          scrollableDiv?.offsetHeight +
-          scrollableDiv.childNodes[0].children[0].offsetHeight >= scrollableDiv.scrollHeight
+          scrollableDiv.scrollTop + 
+          scrollableDiv.offsetHeight + 
+          (scrollableDiv.firstElementChild?.firstElementChild as HTMLElement).offsetHeight >= 
+          scrollableDiv.scrollHeight
         ) {
           setIsScrollMoreVisible(false);
         } else {
           setIsScrollMoreVisible(true);
         }
       };
-      
+
       scrollableDiv.addEventListener('scroll', handleScroll);
       
       return () => {
         scrollableDiv.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [scrollableDivRef]);
+  }, []);
 
   return (
     <section
@@ -55,14 +55,16 @@ export default function Shows() {
         opacity: isInView ? 1 : 0,
         transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
       }}
-      ref={showsContainerRef}>
+      ref={showsContainerRef}
+    >
       <Container customClasses='pb-2.5 h-full'>
         <div className='flex flex-col items-center text-white pt-11'>
           <div className='overflow-hidden'>
             <h2
               className={`text-2xl translate-y-10 font-bold lg:text-4xl lg:translate-y-20 lg:leading-[3rem] ${
                 isInView ? 'animate-slideUp' : ''
-              }`}>
+              }`}
+            >
               Incoming Shows &#127928;
             </h2>
           </div>
@@ -70,7 +72,8 @@ export default function Shows() {
         </div>
         <div
           className='scoller relative mt-6 h-[calc(100%-14rem)] overflow-hidden overflow-y-auto no-scrollbar'
-          ref={scrollableDivRef}>
+          ref={scrollableDivRef}
+        >
           <TourDates />
         </div>
 
@@ -78,7 +81,8 @@ export default function Shows() {
           className={`absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center transition${
             !isScrollMoreVisible ? ' opacity-0' : ''
           }`}
-          onClick={clickHandler}>
+          onClick={clickHandler}
+        >
           <p className='text-yellow-btn-primary text-sm underline cursor-pointer'>Show more</p>
           <ArrowBottom />
         </div>
