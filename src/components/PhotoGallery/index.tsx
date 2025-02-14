@@ -88,15 +88,15 @@ export default function PhotoGallery() {
                     onClick={() => clickHandler(index)}
                   />
                 </div>
-                <h5 className='text-sm md:text-lg xl:text-xl font-medium'>{item.club}</h5>
-                <span className='flex'>
+                <h4 className='text-sm md:text-lg xl:text-xl font-medium'>{item.club}</h4>
+                <p className='flex items-center ml-1'>
                   <MapMapper />
-                  <h5 className='ml-2 text-sm md:text-lg'>{item.city}</h5>
-                </span>
-                <span className='flex'>
+                  <span className='ml-2 text-sm md:text-lg'>{item.city}</span>
+                </p>
+                <p className='flex items-center ml-1'>
                   <Calendar />
-                  <h5 className='ml-2 text-sm md:text-lg'>{item.date}</h5>
-                </span>
+                  <span className='ml-2 text-sm md:text-lg'>{item.date}</span>
+                </p>
               </div>
             );
           })}
