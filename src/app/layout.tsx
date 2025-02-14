@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
     description: 'The 5 Non Blondes are the most celebrated DISCO PARTY band in Brussels.',
     locale: 'en_US',
-    images: '/img/portraits/portrait1.jpg'
+    images: 'http://www.5nonblondes.com/img/band-room.JPG'
   },
   twitter: {
     card: 'summary_large_image',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: '5NB - 5NonBlondes',
     description: 'Probably the best party band in BXL',
     creator: '@5non.blondes',
-    images: '/img/portraits/portrait1.jpg'
+    images: 'http://www.5nonblondes.com/img/band-room.JPG'
   }
 };
 

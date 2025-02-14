@@ -5,6 +5,7 @@ import { useInView } from 'framer-motion';
 import Image from 'next/image';
 
 import { Container } from '@/components';
+import { FaInstagram } from 'react-icons/fa';
 
 export default function ContactUs() {
   const textRef = useRef(null);
@@ -17,7 +18,7 @@ export default function ContactUs() {
     >
       <Image
         className='mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
-        src='/img/2024_10_19_Bruxelles_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.jpg'
+        src='/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.jpg'
         width={750}
         height={533}
         alt='Band playing'
@@ -40,17 +41,15 @@ export default function ContactUs() {
                 Contact us
               </h2>
             </div>
-            <p>
-              And get us a drink in case you around. <br></br>Email us at{' '}
+            <p className='flex gap-4'>
+              And get us a drink in case you around. <br></br>Contact us on{' '}
               <a
-                className='text-fuchsia-800 underline underline-offset-4 hover:opacity-75'
-                href='https://www.paninopanini.co.uk/'
-                target='_blank'
-                rel='noreferrer'>
-                {' '}
-                hello@panicpanini.com{' '}
-              </a>{' '}
-              or fill the form below.
+                className="hover:opacity-75 text-white"
+                href="https://www.instagram.com/5nblondes"
+                aria-label="Follow 5 Non Blondes on Instagram"
+              >
+                <FaInstagram size={36} />
+              </a>
             </p>
           </div>
         </div>
