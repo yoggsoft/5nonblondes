@@ -18,7 +18,7 @@ export default function ContactUs() {
     >
       <Image
         className='mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
-        src='/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.jpg'
+        src='/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG'
         width={750}
         height={533}
         alt='Band playing'

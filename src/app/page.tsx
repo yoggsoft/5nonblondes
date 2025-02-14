@@ -12,6 +12,7 @@ export default function Home() {
     <>
       <main className='min-h-screen bg-purple-700'>
         <Intro />
+        <TextParallax />
         <About />
         <ContactUs />
         <TextParallax />

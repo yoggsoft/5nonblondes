@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
 import CookieConsent from 'react-cookie-consent';
+import Image from 'next/image';
 
 import {
   BandIdentity,
@@ -50,27 +51,25 @@ export default function Intro() {
       <div className='absolute w-full h-full top-0 left-0'>
         <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-b from-purple-500 to-pink-500 opacity-10'></div>
         <div className='absolute w-full h-full top-0 left-0 bg-hero-pattern bg-repeat'></div>
-        <video
-          autoPlay
-          muted
-          loop
-          poster='/img/portraits/portrait7.jpg'
-          className='object-cover w-full h-full z-10'
-          playsInline>
-          <source src='./video-band.webm' type='video/webm' />
-          <source src='./video-band.mp4' type='video/mp4' />
-          <p>
-            Your browser doesn&#8217;t support HTML video. Here is a
-            <a href='./video-band.mp4'>link to the video</a> instead.
-          </p>
-        </video>
+        <Image
+          height={1980}
+          width={1080}
+          className='
+            object-cover
+            w-full
+            h-full
+            z-10
+          '
+          src={'/img/portraits/portrait7.jpg'}
+          alt='headling'
+        />
       </div>
       <BackToTop customClasses={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
       <CookieConsent
         disableStyles={true}
         buttonText='Consent'
         cookieName='cookie_consent'
-        buttonClasses='bg-fuchsia-500 rounded-full p-1 px-3 text-sm text-xs text-white'
+        buttonClasses='bg-fuchsia-600 rounded-full p-1 px-3 text-sm text-xs text-white'
         containerClasses='w-full fixed !bottom-0 bg-fuchsia-400 p-3 z-[50] lg:bg-stone-300/70 lg:backdrop-blur-lg lg:left-8 lg:!bottom-2 lg:rounded-md lg:max-w-md'
         contentClasses='text-sm leading-none mb-1 lg:text-white'
         expires={20}>
