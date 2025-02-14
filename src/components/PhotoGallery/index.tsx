@@ -88,7 +88,7 @@ export default function PhotoGallery() {
                     onClick={() => clickHandler(index)}
                   />
                 </div>
-                <h4 className='text-sm md:text-lg xl:text-xl font-medium'>{item.club}</h4>
+                <h3 className='text-sm md:text-lg xl:text-xl font-medium'>{item.club}</h3>
                 <p className='flex items-center ml-1'>
                   <MapMapper />
                   <span className='ml-2 text-sm md:text-lg'>{item.city}</span>
