@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
 import CookieConsent from 'react-cookie-consent';
+import Image from 'next/image';
 
 import {
   BandIdentity,
@@ -50,20 +51,18 @@ export default function Intro() {
       <div className='absolute w-full h-full top-0 left-0'>
         <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-b from-purple-500 to-pink-500 opacity-10'></div>
         <div className='absolute w-full h-full top-0 left-0 bg-hero-pattern bg-repeat'></div>
-        <video
-          autoPlay
-          muted
-          loop
-          poster='/img/portraits/portrait7.jpg'
-          className='object-cover w-full h-full z-10'
-          playsInline>
-          <source src='./video-band.webm' type='video/webm' />
-          <source src='./video-band.mp4' type='video/mp4' />
-          <p>
-            Your browser doesn&#8217;t support HTML video. Here is a
-            <a href='./video-band.mp4'>link to the video</a> instead.
-          </p>
-        </video>
+        <Image
+          height={1980}
+          width={1080}
+          className='
+            object-cover
+            w-full
+            h-full
+            z-10
+          '
+          src={'/img/portraits/portrait7.jpg'}
+          alt='headling'
+        />
       </div>
       <BackToTop customClasses={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
       <CookieConsent
@@ -79,3 +78,27 @@ export default function Intro() {
     </section>
   );
 }
+
+// /* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+// .image-container {
+//   display: inline-block;
+//   position: relative;
+//   line-height: 0;
+//   background: #42a4ff;
+// }
+// .image-container::after {
+//   content: '';
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   mix-blend-mode: lighten;
+//   background: #ab0000;
+//   opacity: 0.83;
+// }
+// .image-container > img {
+  // -webkit-filter:   contrast(120%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+  //         filter:   contrast(120%) grayscale(100%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(100%) sepia(0%);
+  // mix-blend-mode: multiply;
+// }
