@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
+import { Roboto_Condensed } from 'next/font/google';
 import './globals.css';
+
+const robotoCondensed = Roboto_Condensed({
+  weight: ['300', '400', '700'],
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ww.5nonblondes.com'),
@@ -51,7 +57,7 @@ export default function RootLayout({
         <meta itemProp='url' content='http://www.5nonblondes.com' />
         <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body>
+      <body className={`${robotoCondensed.className} bg-amethyst-primary`}>
         {children}
       </body>
     </html>

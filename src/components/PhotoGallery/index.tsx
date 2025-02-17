@@ -74,11 +74,11 @@ export default function PhotoGallery() {
           </h2>
         </div>
         <p>Past shows:</p>
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5'>
           {galleryThumbnails.map((item, index) => {
             return (
               <div className='flex flex-col mb-5 leading-none' key={item.id}>
-                <div className='w-full h-full rounded-lg bg-fuchsia-500 transition-all'>
+                <div className='w-full h-full rounded-lg bg-amethyst-primary transition-all'>
                   <Image
                     className='rounded-lg cursor-pointer hover:opacity-60 transition-all'
                     src={item.src}

@@ -26,7 +26,7 @@ export default function About() {
           }}>
           <div className='overflow-hidden'>
             <h2
-              className={`font-bold text-6xl pb-6 translate-y-20 text-white font-permanentMarker ${
+              className={`uppercase italic font-bold text-6xl pb-6 translate-y-20 text-white font-permanentMarker ${
                 isInView ? 'animate-slideUp' : ''
               }`}>
               About
@@ -34,7 +34,7 @@ export default function About() {
           </div>
 
           <p className='text-3xl pb-6 text-white'>
-            We are a lively party cover band, based in <strong className='text-fuchsia-500 btn-primary no-underline underline-offset-4 hover:text-fuchsia-600'>
+            We are a lively party cover band, based in <strong className='text-purple-primary btn-primary no-underline underline-offset-4 hover:text-amethyst-primary'>
               Brussels
             </strong>, who bring a burst of energy to every performance.
             With a diverse mix of classic rock, pop, and dance hits from the 70, 80 90s and 00.

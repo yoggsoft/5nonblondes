@@ -6,7 +6,7 @@ export default function   Footer() {
   return (
     <section id='footer' className='bg-black w-full lg:fixed lg:bottom-0 lg:z-[-1] lg:h-[8rem]'>
       <footer className='w-full'>
-        <div className='bg-fuchsia-500 pt-3 relative z-[100]'>
+        <div className='bg-amethyst-primary pt-3 relative z-[100]'>
           <Container customClasses='flex justify-between items-center'>
             <Image
               className='max-w-[10rem] lg:max-w-[15rem] h-auto rounded-full'

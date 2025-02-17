@@ -9,7 +9,7 @@ export default function BandIdentity() {
     <>
       <div className='w-full py-3 z-50 lg:hidden'>
         <Container customClasses='px-2.5 flex items-center justify-between font-sm'>
-          <Image className='rounded-full max-w-[6rem] h-auto ' src='/img/5nb-logo.jpeg' width={204} height={204} alt='5 Non Blondes logo' />
+          <Image className=' max-w-[6rem] h-auto ' src='/img/5nb-logo.jpeg' width={204} height={204} alt='5 Non Blondes logo' />
           <ScrollTo toId='shows' duration={1500}>
             <div className='flex gap-4'>
               <a
@@ -38,8 +38,8 @@ export default function BandIdentity() {
         </Container>
       </div>
       <div className='hidden h-full flex-col justify-between grow-0 shrink-0 bg-black z-10 bg-opacity-30 lg:flex'>
-        <div className='logo-container border-y-[1.25rem] border-fuchsia-500 py-4 opacity-1'>
-          <Image className='rounded px-12 py-3 max-w-[18.75rem] h-auto' src='/img/5nb-logo.jpeg' width={324} height={324} alt='5 Non Blondes logo' />
+        <div className='logo-container opacity-1'>
+          <Image className='rounded max-w-[18.75rem] h-auto' src='/img/5nb-logo.jpeg' width={324} height={324} alt='5 Non Blondes logo' />
         </div>
       </div>
     </>
