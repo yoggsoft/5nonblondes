@@ -18,8 +18,8 @@ export default {
         rockSalt: ['Rock Salt', 'sans-serif'],
       },
       colors: {
-        'fluo-green': '#43ffb6',
-        'yellow-btn-primary': '#ffc621',
+        'purple-primary': '#7C7CF5',
+        'amethyst-primary': '#D100FF',
         'medium-gray': '#bebebe',
       },
       boxShadow: {

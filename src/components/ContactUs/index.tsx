@@ -41,14 +41,14 @@ export default function ContactUs() {
                 Contact us
               </h2>
             </div>
-            <p className='flex gap-4'>
+            <p className='flex items-center text-3xl pb-6 text-white gap-4'>
               And get us a drink in case you around. <br></br>Contact us on{' '}
               <a
                 className="hover:opacity-75 text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Instagram"
               >
-                <FaInstagram size={36} />
+                <FaInstagram size={64} />
               </a>
             </p>
           </div>

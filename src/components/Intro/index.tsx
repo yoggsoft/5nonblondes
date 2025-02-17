@@ -49,8 +49,6 @@ export default function Intro() {
       ref={sectionRef}>
       <BandIdentity />
       <div className='absolute w-full h-full top-0 left-0'>
-        <div className='absolute w-full h-full top-0 left-0 bg-gradient-to-b from-purple-500 to-pink-500 opacity-10'></div>
-        <div className='absolute w-full h-full top-0 left-0 bg-hero-pattern bg-repeat'></div>
         <Image
           height={1980}
           width={1080}

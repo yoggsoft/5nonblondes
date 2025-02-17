@@ -17,7 +17,8 @@ export default function BackToTop({ customClasses }: { customClasses: string }) 
       text-white
         rounded-full
         right-2
-      bg-fuchsia-400
+      bg-purple-primary
+      hover:bg-amethyst-primary
         p-3.5 z-[99]
         opacity-90
         cursor-pointer
