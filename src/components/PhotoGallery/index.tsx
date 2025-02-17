@@ -41,6 +41,13 @@ const galleryThumbnails = [
       { src: '/img/2024_10_19_Brussels_Scotts/dee4a61d-67a0-44c1-b715-49b384c3d023.JPG' },
     ],
   },
+  {
+    id: 3,
+    src: '/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png',
+    club: 'RockClassic',
+    city: 'Brussels',
+    date: '1/03/2025'
+  }
 ];
 
 export default function PhotoGallery() {
@@ -78,17 +85,24 @@ export default function PhotoGallery() {
           {galleryThumbnails.map((item, index) => {
             return (
               <div className='flex flex-col mb-5 leading-none' key={item.id}>
-                <div className='w-full h-full rounded-lg bg-amethyst-primary transition-all'>
+                <div className='w-full h-full rounded-lg transition-all'>
                   <Image
-                    className='rounded-lg cursor-pointer hover:opacity-60 transition-all'
+                    className='
+                      rounded-lg
+                      cursor-pointer
+                      hover:opacity-60
+                      transition-all
+                      max-h-[400px]
+                      max-w-[400px]
+                    '
                     src={item.src}
                     width={400}
                     height={400}
                     alt='Gallery gig thumbnail'
-                    onClick={() => clickHandler(index)}
+                    onClick={() => item.slides ?? clickHandler(index)}
                   />
                 </div>
-                <h3 className='text-sm md:text-lg xl:text-xl font-medium'>{item.club}</h3>
+                <p className='text-sm md:text-lg xl:text-xl font-medium'>{item.club}</p>
                 <p className='flex items-center ml-1'>
                   <MapMapper />
                   <span className='ml-2 text-sm md:text-lg'>{item.city}</span>

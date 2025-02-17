@@ -57,7 +57,7 @@ export default function Shows() {
       }}
       ref={showsContainerRef}
     >
-      <Container customClasses='pb-2.5 h-full'>
+      <Container className='pb-2.5 h-full'>
         <div className='flex flex-col items-center text-white pt-11'>
           <div className='overflow-hidden'>
             <h2

@@ -7,7 +7,7 @@ export default function   Footer() {
     <section id='footer' className='bg-black w-full lg:fixed lg:bottom-0 lg:z-[-1] lg:h-[8rem]'>
       <footer className='w-full'>
         <div className='bg-amethyst-primary pt-3 relative z-[100]'>
-          <Container customClasses='flex justify-between items-center'>
+          <Container className='flex justify-between items-center'>
             <Image
               className='max-w-[10rem] lg:max-w-[15rem] h-auto rounded-full'
               src='/img/5nb-logo.jpeg'
@@ -39,11 +39,11 @@ export default function   Footer() {
               </a>
             </div>
           </Container>
-          <div className='bg-black text-white mt-2 py-2'>
-            <p className='text-[0.7rem] text-center leading-tight mb-1 flex items-center justify-center'>
-              Made by 
+          <div className='bg-black text-white mt- py-4 italic'>
+            <p className='text-xl text-center leading-tight mb-1 flex items-center justify-center'>
+              Made by&nbsp;
               <a
-                className='text-fuchsia-600 underline underline-offset-4 hover:text-fuchsia-300'
+                className='text-wshite underline underline-offset-4 hover:text-amethyst-primary'
                 href='https://www.manuelreyes.dev/'
                 target='_blank'
                 rel='referrer'

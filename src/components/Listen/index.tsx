@@ -16,7 +16,7 @@ export default function Listen() {
 
   return (
     <section id='listen' className='w-full mt-16 lg:mt-56'>
-      <Container customClasses='flex flex-col lg:flex-row'>
+      <Container className='flex flex-col lg:flex-row'>
         <div
           className='flex flex-col justify-center basis-2/4 lg:max-w-lg xl:max-w-2xl 2xl:max-w-4xl'
           ref={textRef}

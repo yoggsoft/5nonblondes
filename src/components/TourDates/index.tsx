@@ -128,7 +128,7 @@ export default function TourDates() {
                 <p>{gig.city}</p>
               </div>
               <div className='ml-2.5 lg:ml-auto'>
-                <ButtonPrimary customClasses='text-xs md:text-sm lg:text-base'>Get Ticket</ButtonPrimary>
+                <ButtonPrimary className='text-xs md:text-sm lg:text-base'>Get Ticket</ButtonPrimary>
               </div>
             </div>
           </li>

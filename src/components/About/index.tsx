@@ -15,7 +15,7 @@ export default function About() {
       id='about'
       className='relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56'
     >
-      <Container customClasses='lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
+      <Container className='lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div
           className='relative flex flex-col lg:max-w-md xl:max-w-2xl 2xl:max-w-4xl'
           ref={textRef}

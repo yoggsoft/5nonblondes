@@ -23,7 +23,7 @@ export default function ContactUs() {
         height={533}
         alt='Band playing'
       />
-      <Container customClasses='flex flex-col overflow-hidden lg:items-end lg:justify-end lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
+      <Container className='flex flex-col overflow-hidden lg:items-end lg:justify-end lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div
           className='flex justify-end flex-col lg:items-end lg:max-w-md xl:max-w-2xl 2xl:max-w-4xl'
           ref={textRef}

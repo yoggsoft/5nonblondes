@@ -7,7 +7,9 @@ import Image from 'next/image';
 
 import {
   BandIdentity,
-  BackToTop
+  BackToTop,
+  Container,
+  IntroTourDates
 } from '@/components';
 
 // const observerOptions = {
@@ -62,7 +64,22 @@ export default function Intro() {
           alt='headling'
         />
       </div>
-      <BackToTop customClasses={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
+      <Container className='
+        flex
+        flex-col
+        justify-center
+        items-center
+        absolute
+        left-1/2
+        top-1/2
+        -translate-x-1/2
+        -translate-y-1/2
+        lg:justify-end
+        lg:items-end
+      '>
+        <IntroTourDates />
+      </Container>
+      <BackToTop className={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
       <CookieConsent
         disableStyles={true}
         buttonText='Consent'
