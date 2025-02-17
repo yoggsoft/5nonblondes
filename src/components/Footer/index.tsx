@@ -4,15 +4,23 @@ import { FaTiktok, FaInstagram, FaFacebookSquare } from 'react-icons/fa';
 
 export default function   Footer() {
   return (
-    <section id='footer' className='bg-black w-full lg:fixed lg:bottom-0 lg:z-[-1] lg:h-[8rem]'>
+    <section id='footer' className='
+      bg-charcoal-primary
+      w-full
+      h-[6rem]
+      lg:fixed
+      lg:bottom-0
+      lg:z-[-1]
+      lg:h-[8rem]
+    '>
       <footer className='w-full'>
-        <div className='bg-amethyst-primary pt-3 relative z-[100]'>
-          <Container className='flex justify-between items-center'>
+        <div className='relative z-[100]'>
+          <Container className='flex justify-between items-center py-2 lg:py-4'>
             <Image
-              className='max-w-[10rem] lg:max-w-[15rem] h-auto rounded-full'
-              src='/img/5nb-logo.jpeg'
-              width={30}
-              height={30}
+              className='max-w-[6rem] lg:max-w-[8rem] h-auto'
+              src='/img/5NB-logo-bw-small.png'
+              width={120}
+              height={42}
               alt='Footer logo'
             />
             <div className='flex gap-3 md:gap-4'>
@@ -21,29 +29,43 @@ export default function   Footer() {
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Facebook"
               >
-                <FaFacebookSquare size={36} />
+                <FaFacebookSquare className='text-2xl lg:text-4xl' />
               </a>
               <a
                 className="hover:opacity-75 text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Instagram"
               >
-                <FaInstagram size={36} />
+                <FaInstagram className='text-2xl lg:text-4xl' />
               </a>
               <a
                 className="hover:opacity-75 text-white"
                 href="https://www.tiktok.com/@5non.blondes"
                 aria-label="Follow 5 Non Blondes on TikTok"
               >
-                <FaTiktok size={34} />
+                <FaTiktok className='text-2xl lg:text-4xl' />
               </a>
             </div>
           </Container>
-          <div className='bg-black text-white mt- py-4 italic'>
-            <p className='text-xl text-center leading-tight mb-1 flex items-center justify-center'>
+          <Container className='
+            text-xs
+            lg:text-sm
+            flex
+            justify-between
+            leading-none
+            py-2
+            lg:py-4
+          text-white
+            uppercase
+            italic
+          '>
+            <span className='font-bold'>
+              ©&nbsp;{new Date().getFullYear()}&nbsp;-&nbsp;5&nbsp;NON&nbsp;BLONDES
+            </span>
+            <span>
               Made by&nbsp;
               <a
-                className='text-wshite underline underline-offset-4 hover:text-amethyst-primary'
+                className='font-bold underline underline-offset-4 hover:text-amethyst-primary'
                 href='https://www.manuelreyes.dev/'
                 target='_blank'
                 rel='referrer'
@@ -51,8 +73,8 @@ export default function   Footer() {
               >
                 manuelreyes
               </a>
-            </p>
-          </div>
+            </span>
+          </Container>
         </div>
       </footer>
     </section>

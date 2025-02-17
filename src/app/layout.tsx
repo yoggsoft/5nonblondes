@@ -57,7 +57,7 @@ export default function RootLayout({
         <meta itemProp='url' content='http://www.5nonblondes.com' />
         <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
-      <body className={`${robotoCondensed.className} bg-amethyst-primary`}>
+      <body className={`${robotoCondensed.className}`}>
         {children}
       </body>
     </html>

@@ -1,12 +1,15 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useInView } from 'framer-motion';
-import { Container } from '@/components';
+import classNames from 'classnames';
 import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
+
+import { Container } from '@/components';
 import { FaMapMarkerAlt as MapMapper, FaCalendarAlt as Calendar } from 'react-icons/fa';
+
+import 'yet-another-react-lightbox/styles.css';
 
 const galleryThumbnails = [
   {
@@ -50,11 +53,27 @@ const galleryThumbnails = [
   }
 ];
 
+type galleryItem = {
+  id: number,
+  src: string,
+  venue: string,
+  date: Date,
+  slides?: Array<string>
+}
+
 export default function PhotoGallery() {
-  const [openGallery, setOpenGallery] = useState(false);
-  const [galleryIndex, setGalleryIndex] = useState(0);
+  const [openGallery, setOpenGallery] = useState<boolean>(false);
+  const [galleryIndex, setGalleryIndex] = useState<number>(0);
+  const [galleryItems, setGalleryItems] = useState<Array<galleryItem>>([]);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
+
+  useEffect(() => {
+    fetch('/tourdates.json')
+      .then(response=> response.json())
+      .then(tourdates => setGalleryItems(tourdates))
+      .catch(error => console.error('Error fetching JSON:', error));
+  }, [galleryItems]);
 
   const clickHandler = (index: number) => {
     setOpenGallery(true);
@@ -64,7 +83,14 @@ export default function PhotoGallery() {
   return (
     <section
       id='photo-gallery'
-      className='w-full mt-16 pb-14 mb-[128px] text-white'
+      className='
+        w-full
+        mt-16
+        pb-14
+        mb-[4rem]
+        lg:mb-[8rem]
+      text-white
+      '
       style={{
         transform: isInView ? 'none' : 'translateY(100px)',
         opacity: isInView ? 1 : 0,
@@ -74,9 +100,16 @@ export default function PhotoGallery() {
       <Container>
         <div className='overflow-hidden'>
           <h2
-            className={`font-bold text-6xl pb-6 translate-y-24 font-permanentMarker ${
-              isInView ? 'animate-slideUp' : ''
-            }`}>
+            className={classNames(
+              'font-bold',
+              'text-6xl',
+              'pb-6',
+              'translate-y-24',
+              {
+                ['animate-slideUp']: isInView
+              }
+            )}
+          >
             Gallery
           </h2>
         </div>

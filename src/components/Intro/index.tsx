@@ -2,7 +2,6 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
-import CookieConsent from 'react-cookie-consent';
 import Image from 'next/image';
 
 import {
@@ -80,16 +79,6 @@ export default function Intro() {
         <IntroTourDates />
       </Container>
       <BackToTop className={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
-      <CookieConsent
-        disableStyles={true}
-        buttonText='Consent'
-        cookieName='cookie_consent'
-        buttonClasses='bg-fuchsia-600 rounded-full p-1 px-3 text-sm text-xs text-white'
-        containerClasses='w-full fixed !bottom-0 bg-fuchsia-400 p-3 z-[50] lg:bg-stone-300/70 lg:backdrop-blur-lg lg:left-8 lg:!bottom-2 lg:rounded-md lg:max-w-md'
-        contentClasses='text-sm leading-none mb-1 lg:text-white'
-        expires={20}>
-        This website uses cookies to enhance the user experience.
-      </CookieConsent>
     </section>
   );
 }
