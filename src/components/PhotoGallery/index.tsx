@@ -13,22 +13,14 @@ import 'yet-another-react-lightbox/styles.css';
 
 const galleryThumbnails: Array<galleryItem> = [
   {
-    id: 1,
-    src: '/img/2024_05_31_Brussels_RockClassic/2024_05_31_Brussels_RockClassic.png',
+    id: 5,
+    src: '/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png',
     club: 'Rock Classic Bar',
     city: 'Brussels',
-    date: '05/31/2024',
-    slides: [
-      { src: '/img/2024_05_31_Brussels_RockClassic/0f10d2d3-adcb-4320-a0f3-046841033206.JPG' },
-      { src: '/img/2024_05_31_Brussels_RockClassic/38b5d789-2cda-4648-8341-5420201f9fc3.JPG' },
-      { src: '/img/2024_05_31_Brussels_RockClassic/a5b8362d-211b-4e8a-929f-ba6c4945ffe0.JPG' },
-      { src: '/img/2024_05_31_Brussels_RockClassic/a7abdf31-ed44-46ff-a66d-031d64b4cc0b.JPG' },
-      { src: '/img/2024_05_31_Brussels_RockClassic/c175852b-2d40-4a6b-90aa-9ab6e248c2ff.JPG' },
-      { src: '/img/2024_05_31_Brussels_RockClassic/f4bc9b40-428b-45ea-86d5-757b67eb4d39.JPG' },
-    ],
+    date: '02/14/2025'
   },
   {
-    id: 2,
+    id: 4,
     src: '/img/2024_10_19_Brussels_Scotts/dee4a61d-67a0-44c1-b715-49b384c3d023.JPG',
     club: 'Scotts Bar & Kitchen',
     city: 'Brussels',
@@ -46,20 +38,28 @@ const galleryThumbnails: Array<galleryItem> = [
   },
   {
     id: 3,
-    src: '/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png',
+    src: '/img/2024_05_31_Brussels_RockClassic/2024_05_31_Brussels_RockClassic.png',
     club: 'Rock Classic Bar',
     city: 'Brussels',
-    date: '02/14/2025'
+    date: '05/31/2024',
+    slides: [
+      { src: '/img/2024_05_31_Brussels_RockClassic/0f10d2d3-adcb-4320-a0f3-046841033206.JPG' },
+      { src: '/img/2024_05_31_Brussels_RockClassic/38b5d789-2cda-4648-8341-5420201f9fc3.JPG' },
+      { src: '/img/2024_05_31_Brussels_RockClassic/a5b8362d-211b-4e8a-929f-ba6c4945ffe0.JPG' },
+      { src: '/img/2024_05_31_Brussels_RockClassic/a7abdf31-ed44-46ff-a66d-031d64b4cc0b.JPG' },
+      { src: '/img/2024_05_31_Brussels_RockClassic/c175852b-2d40-4a6b-90aa-9ab6e248c2ff.JPG' },
+      { src: '/img/2024_05_31_Brussels_RockClassic/f4bc9b40-428b-45ea-86d5-757b67eb4d39.JPG' },
+    ],
   },
   {
-    id: 4,
+    id: 2,
     src: '/img/2024_03_23_Brussels_Scotts/2024_03_23_Brussels_Scotts.png',
     club: 'Scotts Bar & Kitchen',
     city: 'Brussels',
     date: '03/23/2024'
   },
   {
-    id: 5,
+    id: 1,
     src: '/img/2023_09_29_Brussels_Scotts/2023_09_29_Brussels_Scotts.png',
     club: 'Scotts Bar & Kitchen',
     city: 'Brussels',
@@ -124,58 +124,56 @@ export default function PhotoGallery() {
         <p className='font-bold italic text-xl md:text-2xl lg:text-3xl'>Past shows:</p>
         <div className='grid grid-cols-1 grid- md:grid-cols-2 lg:grid-cols-4 gap-2 mt-5'>
           {
-            galleryThumbnails
-              .sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-              .map((item, index) => {
-                return (
+            galleryThumbnails.map((item, index) => {
+              return (
+                <div
+                  key={item.id}
+                  className='
+                    flex
+                    flex-col
+                    mb-2
+                    leading-none
+                  '
+                >
                   <div
-                    key={item.id}
-                    className='
-                      flex
-                      flex-col
-                      mb-2
-                      leading-none
-                    '
+                    className={classNames(
+                      'w-full',
+                      'mb-2',
+                      'lg:mb-4',
+                      'rounded-lg',
+                      'transition-all',
+                      'overflow-hidden',
+                      'border-transparent',
+                      'border-4',
+                      'rounded-lg',
+                      'h-[250px]',
+                      'lg:h-[500px]',
+                      {
+                        'hover:border-purple-primary cursor-pointer': item.slides,
+                      }
+                    )}
                   >
-                    <div
-                      className={classNames(
-                        'w-full',
-                        'mb-2',
-                        'lg:mb-4',
-                        'rounded-lg',
-                        'transition-all',
-                        'overflow-hidden',
-                        'border-transparent',
-                        'border-4',
-                        'rounded-lg',
-                        {
-                          'hover:border-purple-primary cursor-pointer': item.slides,
-                        }
-                      )}
-                    >
-                      <Image
-                        className='transition-all w-full'
-                        src={item.src}
-                        width={720}
-                        height={1280}
-                        alt='Gallery gig thumbnail'
-                        onClick={() => item.slides && clickHandler(index)}
-                      />
-                    </div>
-                    <p className='text text-2xl font-bold'>{item.club}</p>
-                    <p className='flex items-center ml-1'>
-                      <MapMapper />
-                      <span className='ml-2 text-xl md:text-lg'>{item.city}</span>
-                    </p>
-                    <p className='flex items-center ml-1'>
-                      <Calendar />
-                      <span className='ml-2  md:text-lg'>{item.date}</span>
-                    </p>
+                    <Image
+                      className='transition-all w-full'
+                      src={item.src}
+                      width={720}
+                      height={1280}
+                      alt='Gallery gig thumbnail'
+                      onClick={() => item.slides && clickHandler(index)}
+                    />
                   </div>
-                );
-              }
-              )
-          }
+                  <p className='text text-2xl font-bold'>{item.club}</p>
+                  <p className='flex items-center ml-1'>
+                    <MapMapper />
+                    <span className='ml-2 text-xl md:text-lg'>{item.city}</span>
+                  </p>
+                  <p className='flex items-center ml-1'>
+                    <Calendar />
+                    <span className='ml-2  md:text-lg'>{item.date}</span>
+                  </p>
+                </div>
+              );
+            })}
           <Lightbox
             open={openGallery}
             close={() => setOpenGallery(false)}

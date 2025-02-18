@@ -7,14 +7,9 @@ import Image from 'next/image';
 import {
   BandIdentity,
   BackToTop,
-  Container,
-  IntroTourDates
+  // Container,
+  // IntroTourDates
 } from '@/components';
-
-// const observerOptions = {
-//   rootMargin: '0px',
-//   threshold: 0,
-// };
 
 export default function Intro() {
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
@@ -47,7 +42,8 @@ export default function Intro() {
         lg:flex-row
         lg:justify-start
       '
-      ref={sectionRef}>
+      ref={sectionRef}
+    >
       <BandIdentity />
       <div className='absolute w-full h-full top-0 left-0'>
         <Image
@@ -58,26 +54,28 @@ export default function Intro() {
             w-full
             h-full
             z-10
+            bg-blend-multiply
           '
           src={'/img/portraits/portrait7.jpg'}
           alt='headling'
         />
       </div>
-      <Container className='
+      {/* <Container className='
         flex
         flex-col
-        justify-center
-        items-center
+        flex-col-reverse
+        justify-end
+        items-end
         absolute
-        left-1/2
-        top-1/2
+        right-0
+        bottom-0
         -translate-x-1/2
         -translate-y-1/2
         lg:justify-end
         lg:items-end
       '>
         <IntroTourDates />
-      </Container>
+      </Container> */}
       <BackToTop className={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
     </section>
   );

@@ -42,25 +42,25 @@ export default function About() {
           
           <div className='flex pt-8 gap-4 items-center'>
             <a
-              className="hover:opacity-75 text-white"
+              className="hover:text-amethyst-primary text-white"
               href="https://www.instagram.com/5nblondes"
               aria-label="Follow 5 Non Blondes on Facebook"
             >
-              <FaFacebookSquare size={36} />
+              <FaFacebookSquare className='text-2xl lg:text-4xl' />
             </a>
             <a
-              className="hover:opacity-75 text-white"
+              className="hover:text-amethyst-primary text-white"
               href="https://www.tiktok.com/@5non.blondes"
               aria-label="Follow 5 Non Blondes on TikTok"
             >
-              <FaTiktok size={30} />
+              <FaTiktok className='text-2xl lg:text-4xl' />
             </a>
             <a
-              className="hover:opacity-75 text-white"
+              className="hover:text-amethyst-primary text-white"
               href="https://www.instagram.com/5nblondes"
               aria-label="Follow 5 Non Blondes on Instagram"
             >
-              <FaInstagram size={36} />
+              <FaInstagram className='text-2xl lg:text-4xl' />
             </a>
           </div>
         </div>

@@ -25,21 +25,21 @@ export default function   Footer() {
             />
             <div className='flex gap-3 md:gap-4'>
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Facebook"
               >
                 <FaFacebookSquare className='text-2xl lg:text-4xl' />
               </a>
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Instagram"
               >
                 <FaInstagram className='text-2xl lg:text-4xl' />
               </a>
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.tiktok.com/@5non.blondes"
                 aria-label="Follow 5 Non Blondes on TikTok"
               >
@@ -49,7 +49,6 @@ export default function   Footer() {
           </Container>
           <Container className='
             text-xs
-            lg:text-sm
             flex
             justify-between
             leading-none
@@ -62,17 +61,31 @@ export default function   Footer() {
             <span className='font-bold'>
               ©&nbsp;{new Date().getFullYear()}&nbsp;-&nbsp;5&nbsp;NON&nbsp;BLONDES
             </span>
-            <span>
-              Made by&nbsp;
-              <a
-                className='font-bold underline underline-offset-4 hover:text-amethyst-primary'
-                href='https://www.manuelreyes.dev/'
-                target='_blank'
-                rel='referrer'
-                aria-label='Manuel Reyes'
-              >
-                manuelreyes
-              </a>
+            <span className='flex flex-col text-right gap-1'>
+              <span>
+                Site&nbsp;by&nbsp;
+                <a
+                  className='font-bold underline underline-offset-4 hover:text-amethyst-primary'
+                  href='https://www.manuelreyes.dev/'
+                  target='_blank'
+                  rel='referrer'
+                  aria-label='Visit Manuel Reyes Website'
+                >
+                  manuelreyes
+                </a>
+              </span>
+              <span>
+                Photos&nbsp;by&nbsp;
+                <a
+                  className='font-bold underline underline-offset-4 hover:text-amethyst-primary'
+                  href='https://www.instagram.com/davide_matassoni?igsh=NGg5eWdqOTM2cHVx'
+                  target='_blank'
+                  rel='referrer'
+                  aria-label='Folow Davide Matassoni on Instagram'
+                >
+                  Davide Matassoni
+                </a>
+              </span>
             </span>
           </Container>
         </div>

@@ -38,18 +38,17 @@ export default function ContactUs() {
                 className={`font-bold text-6xl pb-6 translate-y-24 font-permanentMarker ${
                   isInView ? 'animate-slideUp' : ''
                 }`}>
-                Contact us
+                Follow us on
               </h2>
             </div>
             <p className='flex items-center text-3xl pb-6 text-white gap-4'>
-              And get us a drink in case you around. <br></br>Contact us on{' '}
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Instagram"
               >
-                <FaInstagram size={64} />
-              </a>
+                <FaInstagram className='text-2xl lg:text-4xl' />
+              </a>&nbsp;And get us a drink in case you around.
             </p>
           </div>
         </div>
