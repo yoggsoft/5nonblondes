@@ -46,9 +46,10 @@ const Phrase = () => {
         uppercase
         font-bold
         italic
+        pointer-events-none
       text-white'
       >
-        5 NON BLONDES&nbsp;-&nbsp;THE BEST PARTY BAND IN BXL&nbsp;-&nbsp;
+        5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDESS&nbsp;-&nbsp;
       </p>
     </div>
   );
@@ -66,7 +67,7 @@ export default function TextParallax() {
 
   return (
     <section
-      className='overflow-hidden mt-16 lg:mt-56'
+      className='overflow-hidden mt-4 lg:mt-8'
       style={{
         transform: isInView ? 'none' : 'translateY(50px)',
         opacity: isInView ? 1 : 0,

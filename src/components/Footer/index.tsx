@@ -4,55 +4,89 @@ import { FaTiktok, FaInstagram, FaFacebookSquare } from 'react-icons/fa';
 
 export default function   Footer() {
   return (
-    <section id='footer' className='bg-black w-full lg:fixed lg:bottom-0 lg:z-[-1] lg:h-[8rem]'>
+    <section id='footer' className='
+      bg-charcoal-primary
+      w-full
+      h-[6rem]
+      lg:fixed
+      lg:bottom-0
+      lg:z-[-1]
+      lg:h-[8rem]
+    '>
       <footer className='w-full'>
-        <div className='bg-amethyst-primary pt-3 relative z-[100]'>
-          <Container customClasses='flex justify-between items-center'>
+        <div className='relative z-[100]'>
+          <Container className='flex justify-between items-center py-2 lg:py-4'>
             <Image
-              className='max-w-[10rem] lg:max-w-[15rem] h-auto rounded-full'
-              src='/img/5nb-logo.jpeg'
-              width={30}
-              height={30}
+              className='max-w-[6rem] lg:max-w-[8rem] h-auto'
+              src='/img/5NB-logo-bw-small.png'
+              width={120}
+              height={42}
               alt='Footer logo'
             />
             <div className='flex gap-3 md:gap-4'>
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Facebook"
               >
-                <FaFacebookSquare size={36} />
+                <FaFacebookSquare className='text-2xl lg:text-4xl' />
               </a>
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Instagram"
               >
-                <FaInstagram size={36} />
+                <FaInstagram className='text-2xl lg:text-4xl' />
               </a>
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.tiktok.com/@5non.blondes"
                 aria-label="Follow 5 Non Blondes on TikTok"
               >
-                <FaTiktok size={34} />
+                <FaTiktok className='text-2xl lg:text-4xl' />
               </a>
             </div>
           </Container>
-          <div className='bg-black text-white mt-2 py-2'>
-            <p className='text-[0.7rem] text-center leading-tight mb-1 flex items-center justify-center'>
-              Made by 
-              <a
-                className='text-fuchsia-600 underline underline-offset-4 hover:text-fuchsia-300'
-                href='https://www.manuelreyes.dev/'
-                target='_blank'
-                rel='referrer'
-                aria-label='Manuel Reyes'
-              >
-                manuelreyes
-              </a>
-            </p>
-          </div>
+          <Container className='
+            text-xs
+            flex
+            justify-center
+            md:justify-end
+            leading-none
+            py-2
+            lg:py-4
+          text-white
+            uppercase
+            italic
+
+          '>
+            <span className='flex gap-2'>
+              <span>
+                Site&nbsp;by&nbsp;
+                <a
+                  className='font-bold underline underline-offset-4 hover:text-amethyst-primary'
+                  href='https://www.manuelreyes.dev/'
+                  target='_blank'
+                  rel='referrer'
+                  aria-label='Visit Manuel Reyes Website'
+                >
+                  manuelreyes
+                </a>
+              </span>
+              <span>
+                Photos&nbsp;by&nbsp;
+                <a
+                  className='font-bold underline underline-offset-4 hover:text-amethyst-primary'
+                  href='https://www.instagram.com/davide_matassoni?igsh=NGg5eWdqOTM2cHVx'
+                  target='_blank'
+                  rel='referrer'
+                  aria-label='Folow Davide Matassoni on Instagram'
+                >
+                  Davide Matassoni
+                </a>
+              </span>
+            </span>
+          </Container>
         </div>
       </footer>
     </section>

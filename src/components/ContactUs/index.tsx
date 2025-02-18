@@ -14,8 +14,21 @@ export default function ContactUs() {
   return (
     <section
       id='contacts'
-      className='relative text-white flex flex-col-reverse items-center w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 lg:flex-row'
-    >
+      className='
+        relative
+      text-white
+        flex
+        flex-col-reverse
+        items-center
+        w-full
+        mt-16
+        mx-auto
+        max-w-[150rem]
+        lg:mt-56
+        lg:flex-row
+        mb-[2rem]
+        lg:mb-[6rem]
+    '>
       <Image
         className='mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
         src='/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG'
@@ -23,7 +36,7 @@ export default function ContactUs() {
         height={533}
         alt='Band playing'
       />
-      <Container customClasses='flex flex-col overflow-hidden lg:items-end lg:justify-end lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
+      <Container className='flex flex-col overflow-hidden lg:items-end lg:justify-end lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div
           className='flex justify-end flex-col lg:items-end lg:max-w-md xl:max-w-2xl 2xl:max-w-4xl'
           ref={textRef}
@@ -38,18 +51,17 @@ export default function ContactUs() {
                 className={`font-bold text-6xl pb-6 translate-y-24 font-permanentMarker ${
                   isInView ? 'animate-slideUp' : ''
                 }`}>
-                Contact us
+                Follow us on
               </h2>
             </div>
             <p className='flex items-center text-3xl pb-6 text-white gap-4'>
-              And get us a drink in case you around. <br></br>Contact us on{' '}
               <a
-                className="hover:opacity-75 text-white"
+                className="hover:text-amethyst-primary text-white"
                 href="https://www.instagram.com/5nblondes"
                 aria-label="Follow 5 Non Blondes on Instagram"
               >
-                <FaInstagram size={64} />
-              </a>
+                <FaInstagram className='text-2xl lg:text-4xl' />
+              </a>&nbsp;And get us a drink in case you around.
             </p>
           </div>
         </div>

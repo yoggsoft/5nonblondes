@@ -2,18 +2,14 @@
 
 import { useRef, useState, useEffect } from 'react';
 import { useInView } from 'framer-motion';
-import CookieConsent from 'react-cookie-consent';
 import Image from 'next/image';
 
 import {
   BandIdentity,
-  BackToTop
+  BackToTop,
+  // Container,
+  // IntroTourDates
 } from '@/components';
-
-// const observerOptions = {
-//   rootMargin: '0px',
-//   threshold: 0,
-// };
 
 export default function Intro() {
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
@@ -46,7 +42,8 @@ export default function Intro() {
         lg:flex-row
         lg:justify-start
       '
-      ref={sectionRef}>
+      ref={sectionRef}
+    >
       <BandIdentity />
       <div className='absolute w-full h-full top-0 left-0'>
         <Image
@@ -57,22 +54,29 @@ export default function Intro() {
             w-full
             h-full
             z-10
+            bg-blend-multiply
           '
           src={'/img/portraits/portrait7.jpg'}
           alt='headling'
         />
       </div>
-      <BackToTop customClasses={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
-      <CookieConsent
-        disableStyles={true}
-        buttonText='Consent'
-        cookieName='cookie_consent'
-        buttonClasses='bg-fuchsia-600 rounded-full p-1 px-3 text-sm text-xs text-white'
-        containerClasses='w-full fixed !bottom-0 bg-fuchsia-400 p-3 z-[50] lg:bg-stone-300/70 lg:backdrop-blur-lg lg:left-8 lg:!bottom-2 lg:rounded-md lg:max-w-md'
-        contentClasses='text-sm leading-none mb-1 lg:text-white'
-        expires={20}>
-        This website uses cookies to enhance the user experience.
-      </CookieConsent>
+      {/* <Container className='
+        flex
+        flex-col
+        flex-col-reverse
+        justify-end
+        items-end
+        absolute
+        right-0
+        bottom-0
+        -translate-x-1/2
+        -translate-y-1/2
+        lg:justify-end
+        lg:items-end
+      '>
+        <IntroTourDates />
+      </Container> */}
+      <BackToTop className={`reveal${isScrollTopVisible ? ' visible' : ''}`} />
     </section>
   );
 }

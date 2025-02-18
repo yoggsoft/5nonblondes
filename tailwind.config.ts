@@ -20,6 +20,7 @@ export default {
       colors: {
         'purple-primary': '#7C7CF5',
         'amethyst-primary': '#D100FF',
+        'charcoal-primary': '#020024',
         'medium-gray': '#bebebe',
       },
       boxShadow: {
