@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { useInView } from 'framer-motion';
 import classNames from 'classnames';
 import Lightbox from 'yet-another-react-lightbox';
@@ -11,13 +11,13 @@ import { FaMapMarkerAlt as MapMapper, FaCalendarAlt as Calendar } from 'react-ic
 
 import 'yet-another-react-lightbox/styles.css';
 
-const galleryThumbnails = [
+const galleryThumbnails: Array<galleryItem> = [
   {
     id: 1,
-    src: '/img/2024_05_31_Brussels_RockClassic/a5b8362d-211b-4e8a-929f-ba6c4945ffe0.JPG',
-    club: 'Rock Classic',
+    src: '/img/2024_05_31_Brussels_RockClassic/2024_05_31_Brussels_RockClassic.png',
+    club: 'Rock Classic Bar',
     city: 'Brussels',
-    date: '31/05/2024',
+    date: '05/31/2024',
     slides: [
       { src: '/img/2024_05_31_Brussels_RockClassic/0f10d2d3-adcb-4320-a0f3-046841033206.JPG' },
       { src: '/img/2024_05_31_Brussels_RockClassic/38b5d789-2cda-4648-8341-5420201f9fc3.JPG' },
@@ -29,10 +29,10 @@ const galleryThumbnails = [
   },
   {
     id: 2,
-    src: '/img/2024_10_19_Brussels_Scotts/c868215e-0a58-4a19-a7c7-67c3625e1cf1.JPG',
-    club: 'Scotts Bar',
+    src: '/img/2024_10_19_Brussels_Scotts/dee4a61d-67a0-44c1-b715-49b384c3d023.JPG',
+    club: 'Scotts Bar & Kitchen',
     city: 'Brussels',
-    date: '10/09/2024',
+    date: '10/19/2024',
     slides: [
       { src: '/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG' },
       { src: '/img/2024_10_19_Brussels_Scotts/253000c4-c39c-483e-9c74-91d540d46007.JPG' },
@@ -47,33 +47,40 @@ const galleryThumbnails = [
   {
     id: 3,
     src: '/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png',
-    club: 'RockClassic',
+    club: 'Rock Classic Bar',
     city: 'Brussels',
-    date: '1/03/2025'
+    date: '02/14/2025'
+  },
+  {
+    id: 4,
+    src: '/img/2024_03_23_Brussels_Scotts/2024_03_23_Brussels_Scotts.png',
+    club: 'Scotts Bar & Kitchen',
+    city: 'Brussels',
+    date: '03/23/2024'
+  },
+  {
+    id: 5,
+    src: '/img/2023_09_29_Brussels_Scotts/2023_09_29_Brussels_Scotts.png',
+    club: 'Scotts Bar & Kitchen',
+    city: 'Brussels',
+    date: '09/29/2023'
   }
 ];
 
-type galleryItem = {
+export type galleryItem = {
   id: number,
   src: string,
-  venue: string,
-  date: Date,
-  slides?: Array<string>
+  club: string,
+  city: string,
+  date: string,
+  slides?: Array<Record<'src', string>>
 }
 
 export default function PhotoGallery() {
   const [openGallery, setOpenGallery] = useState<boolean>(false);
   const [galleryIndex, setGalleryIndex] = useState<number>(0);
-  const [galleryItems, setGalleryItems] = useState<Array<galleryItem>>([]);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
-
-  useEffect(() => {
-    fetch('/tourdates.json')
-      .then(response=> response.json())
-      .then(tourdates => setGalleryItems(tourdates))
-      .catch(error => console.error('Error fetching JSON:', error));
-  }, [galleryItems]);
 
   const clickHandler = (index: number) => {
     setOpenGallery(true);
@@ -102,7 +109,8 @@ export default function PhotoGallery() {
           <h2
             className={classNames(
               'font-bold',
-              'text-6xl',
+              'text-3xl',
+              'lg:text-6xl',
               'pb-6',
               'translate-y-24',
               {
@@ -113,40 +121,61 @@ export default function PhotoGallery() {
             Gallery
           </h2>
         </div>
-        <p>Past shows:</p>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5'>
-          {galleryThumbnails.map((item, index) => {
-            return (
-              <div className='flex flex-col mb-5 leading-none' key={item.id}>
-                <div className='w-full h-full rounded-lg transition-all'>
-                  <Image
+        <p className='font-bold italic text-xl md:text-2xl lg:text-3xl'>Past shows:</p>
+        <div className='grid grid-cols-1 grid- md:grid-cols-2 lg:grid-cols-4 gap-2 mt-5'>
+          {
+            galleryThumbnails
+              .sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+              .map((item, index) => {
+                return (
+                  <div
+                    key={item.id}
                     className='
-                      rounded-lg
-                      cursor-pointer
-                      hover:opacity-60
-                      transition-all
-                      max-h-[400px]
-                      max-w-[400px]
+                      flex
+                      flex-col
+                      mb-2
+                      leading-none
                     '
-                    src={item.src}
-                    width={400}
-                    height={400}
-                    alt='Gallery gig thumbnail'
-                    onClick={() => item.slides ?? clickHandler(index)}
-                  />
-                </div>
-                <p className='text-sm md:text-lg xl:text-xl font-medium'>{item.club}</p>
-                <p className='flex items-center ml-1'>
-                  <MapMapper />
-                  <span className='ml-2 text-sm md:text-lg'>{item.city}</span>
-                </p>
-                <p className='flex items-center ml-1'>
-                  <Calendar />
-                  <span className='ml-2 text-sm md:text-lg'>{item.date}</span>
-                </p>
-              </div>
-            );
-          })}
+                  >
+                    <div
+                      className={classNames(
+                        'w-full',
+                        'mb-2',
+                        'lg:mb-4',
+                        'rounded-lg',
+                        'transition-all',
+                        'overflow-hidden',
+                        'border-transparent',
+                        'border-4',
+                        'rounded-lg',
+                        {
+                          'hover:border-purple-primary cursor-pointer': item.slides,
+                        }
+                      )}
+                    >
+                      <Image
+                        className='transition-all w-full'
+                        src={item.src}
+                        width={720}
+                        height={1280}
+                        alt='Gallery gig thumbnail'
+                        onClick={() => item.slides && clickHandler(index)}
+                      />
+                    </div>
+                    <p className='text text-2xl font-bold'>{item.club}</p>
+                    <p className='flex items-center ml-1'>
+                      <MapMapper />
+                      <span className='ml-2 text-xl md:text-lg'>{item.city}</span>
+                    </p>
+                    <p className='flex items-center ml-1'>
+                      <Calendar />
+                      <span className='ml-2  md:text-lg'>{item.date}</span>
+                    </p>
+                  </div>
+                );
+              }
+              )
+          }
           <Lightbox
             open={openGallery}
             close={() => setOpenGallery(false)}
