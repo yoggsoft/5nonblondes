@@ -50,18 +50,17 @@ export default function   Footer() {
           <Container className='
             text-xs
             flex
-            justify-between
+            justify-center
+            md:justify-end
             leading-none
             py-2
             lg:py-4
           text-white
             uppercase
             italic
+
           '>
-            <span className='font-bold'>
-              ©&nbsp;{new Date().getFullYear()}&nbsp;-&nbsp;5&nbsp;NON&nbsp;BLONDES
-            </span>
-            <span className='flex flex-col text-right gap-1'>
+            <span className='flex gap-2'>
               <span>
                 Site&nbsp;by&nbsp;
                 <a
