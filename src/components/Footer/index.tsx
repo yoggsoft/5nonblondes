@@ -18,7 +18,7 @@ export default function   Footer() {
           <Container className='flex justify-between items-center py-2 lg:py-4'>
             <Image
               className='max-w-[6rem] lg:max-w-[8rem] h-auto'
-              src='/img/5NB-logo-bw-small.png'
+              src='/img/5NB-logo-BW-lg.webp'
               width={120}
               height={42}
               alt='Footer logo'
