@@ -21,7 +21,7 @@ export default function BandIdentity() {
           <div className='flex items-center gap-4'>
             <Image
               className='max-w-[6rem] md:max-w-[10rem] h-auto hover:'
-              src='/img/5NB-logo-bw-small.png'
+              src='/img/5NB-logo-BW-lg.webp'
               width={180}
               height={42}
               alt='Footer logo'
