@@ -14,8 +14,21 @@ export default function ContactUs() {
   return (
     <section
       id='contacts'
-      className='relative text-white flex flex-col-reverse items-center w-full mt-16 mx-auto max-w-[150rem] lg:mt-56 lg:flex-row'
-    >
+      className='
+        relative
+      text-white
+        flex
+        flex-col-reverse
+        items-center
+        w-full
+        mt-16
+        mx-auto
+        max-w-[150rem]
+        lg:mt-56
+        lg:flex-row
+        mb-[2rem]
+        lg:mb-[6rem]
+    '>
       <Image
         className='mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
         src='/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG'

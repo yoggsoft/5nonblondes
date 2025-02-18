@@ -16,18 +16,17 @@ export default function BandIdentity() {
         shrink-0
         z-10
         flex
-        py-3
-        lg:py-12
       '>
-        <Container className='flex items-center justify-between '>
-          <div>
+        <Container className='flex items-center justify-between backdrop-blur-2xl p-6 w-full min-w-full'>
+          <div className='flex items-center gap-4'>
             <Image
-              className='max-w-[6rem] md:max-w-[10rem] h-auto'
+              className='max-w-[6rem] md:max-w-[10rem] h-auto hover:'
               src='/img/5NB-logo-bw-small.png'
               width={180}
               height={42}
               alt='Footer logo'
             />
+            <h1 className='text-4xl uppercase font-bold text-white hidden md:flex'>5 NON BLONDES</h1>
           </div>
           <div className='flex gap-4'>
             <a
