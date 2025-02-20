@@ -65,10 +65,9 @@ export default function Shows() {
                 isInView ? 'animate-slideUp' : ''
               }`}
             >
-              Incoming Shows &#127928;
+              Incoming Shows 🪩 💃🏽🕺
             </h2>
           </div>
-          <h4 className='text-base lg:text-2xl'>We playing in your town!</h4>
         </div>
         <div
           className='scoller relative mt-6 h-[calc(100%-14rem)] overflow-hidden overflow-y-auto no-scrollbar'

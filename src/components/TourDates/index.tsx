@@ -1,110 +1,28 @@
 import { ButtonPrimary } from '@/components';
 
-const tourDates = [
+import type { GetServerSideProps } from 'next';
+import type { EventList } from '../../../types/custom';
+
+export const getServerSideProps = (async () => {
+  const res = await fetch('/tourdates.json');
+  const events: EventList = await res.json()
+  return { props: { events } }
+}) satisfies GetServerSideProps<{ events: EventList }>
+
+
+const tourDates: EventList = [
   {
     id: 1,
-    date: '19 Oct',
-    day: 'Friday',
-    time: '20.30 - 23.00',
-    venue: 'The O2, Isla Square',
-    city: 'London',
+    date: '29 Mar',
+    venue: 'La Ferme Rose',
+    city: 'Uccle',
   },
   {
     id: 2,
-    date: '22 Nov',
-    day: 'Wednesday',
-    time: '20.00 - 22.00',
-    venue: 'Roundhouse, Chalk Bag Rd',
-    city: 'London',
-  },
-  {
-    id: 3,
-    date: '10 Dec',
-    day: 'Saturday',
-    time: '20.00 - 22.00',
-    venue: '200 Camden High St',
-    city: 'London',
-  },
-  {
-    id: 4,
-    date: '03 Jan',
-    day: 'Friday',
-    time: '19.30 - 22.30',
-    venue: 'The Music Room, 49 Elephant St',
-    city: 'London',
-  },
-  {
-    id: 5,
-    date: '04 Jan',
-    day: 'Saturday',
-    time: '21.30 - 23.30',
-    venue: 'The Cool Mouse, 49 Little Mouse St',
-    city: 'New York',
-  },
-  {
-    id: 6,
-    date: '12 Feb',
-    day: 'Monday',
-    time: '21.30 - 23.30',
-    venue: 'The Electric Fox, 389 Fox Road',
-    city: 'Los Angeles',
-  },
-  {
-    id: 7,
-    date: '18 Feb',
-    day: 'Saturday',
-    time: '21.30 - 23.30',
-    venue: 'The Silver Elephant, 56 Elephant Road',
-    city: 'Atlanta',
-  },
-  {
-    id: 8,
-    date: '01 Mar',
-    day: 'Thursday',
-    time: '21.30 - 23.30',
-    venue: 'The Super Cat, 189 Meaow street',
-    city: 'Rome',
-  },
-  {
-    id: 9,
-    date: '12 Mar',
-    day: 'Sunday',
-    time: '21.30 - 23.30',
-    venue: 'The Super Cat, 189 Meaow street',
-    city: 'Rome',
-  },
-  {
-    id: 10,
-    date: '18 Mar',
-    day: 'Saturday',
-    time: '21.30 - 23.30',
-    venue: 'The Golden Eagle, 56 Golden road',
-    city: 'Berlin',
-  },
-  {
-    id: 11,
-    date: '20 May',
-    day: 'Friday',
-    time: '20.00 - 22.30',
-    venue: 'The Silver Elephant, 56 Elephant Road',
-    city: 'Atlanta',
-  },
-  {
-    id: 12,
-    date: '22 May',
-    day: 'Sunday',
-    time: '21.30 - 23.30',
-    venue: 'The Silver Elephant, 56 Elephant Road',
-    city: 'Atlanta',
-  },
-  {
-    id: 13,
-    date: '21 Jul',
-    day: 'Saturday',
-    time: '21.30 - 23.30',
-    venue: 'The Electric Fox, 389 Fox Road',
-    city: 'Los Angeles',
-  },
+    date: '5 April',
+    venue: 'Scotts Bar',
+    city: 'Brussels',
+  }
 ];
 
 export default function TourDates() {
@@ -118,8 +36,7 @@ export default function TourDates() {
                 <p className='font-bold text-center uppercase'>{gig.date}</p>
               </div>
               <div className=' text-white font-semibold leading-tight lg:ml-[20%]'>
-                <p>{gig.day}</p>
-                <p>{gig.time}</p>
+                <p>{gig.date}</p>
               </div>
             </div>
             <div className='flex flex-col mt-2.5 items-center text-center text-base justify-between w-[60%] md:text-xl lg:flex-row lg:text-left lg:w-6/12 lg:mt-0 lg:text-2xl'>
@@ -128,7 +45,9 @@ export default function TourDates() {
                 <p>{gig.city}</p>
               </div>
               <div className='ml-2.5 lg:ml-auto'>
-                <ButtonPrimary className='text-xs md:text-sm lg:text-base'>Get Ticket</ButtonPrimary>
+                {
+                  gig.url && <ButtonPrimary className='text-xs md:text-sm lg:text-base'>Get Ticket</ButtonPrimary>
+                }
               </div>
             </div>
           </li>

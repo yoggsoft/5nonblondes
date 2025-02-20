@@ -10,19 +10,20 @@ import { Container } from '@/components';
 import { FaMapMarkerAlt as MapMapper, FaCalendarAlt as Calendar } from 'react-icons/fa';
 
 import 'yet-another-react-lightbox/styles.css';
+import { GalleryItem } from '../../../types/custom';
 
-const galleryThumbnails: Array<galleryItem> = [
+const galleryThumbnails: Array<GalleryItem> = [
   {
     id: 5,
     src: '/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png',
-    club: 'Rock Classic Bar',
+    venue: 'Rock Classic Bar',
     city: 'Brussels',
     date: '02/14/2025'
   },
   {
     id: 4,
     src: '/img/2024_10_19_Brussels_Scotts/dee4a61d-67a0-44c1-b715-49b384c3d023.JPG',
-    club: 'Scotts Bar & Kitchen',
+    venue: 'Scotts Bar & Kitchen',
     city: 'Brussels',
     date: '10/19/2024',
     slides: [
@@ -39,7 +40,7 @@ const galleryThumbnails: Array<galleryItem> = [
   {
     id: 3,
     src: '/img/2024_05_31_Brussels_RockClassic/2024_05_31_Brussels_RockClassic.png',
-    club: 'Rock Classic Bar',
+    venue: 'Rock Classic Bar',
     city: 'Brussels',
     date: '05/31/2024',
     slides: [
@@ -54,27 +55,18 @@ const galleryThumbnails: Array<galleryItem> = [
   {
     id: 2,
     src: '/img/2024_03_23_Brussels_Scotts/2024_03_23_Brussels_Scotts.png',
-    club: 'Scotts Bar & Kitchen',
+    venue: 'Scotts Bar & Kitchen',
     city: 'Brussels',
     date: '03/23/2024'
   },
   {
     id: 1,
     src: '/img/2023_09_29_Brussels_Scotts/2023_09_29_Brussels_Scotts.png',
-    club: 'Scotts Bar & Kitchen',
+    venue: 'Scotts Bar & Kitchen',
     city: 'Brussels',
     date: '09/29/2023'
   }
 ];
-
-export type galleryItem = {
-  id: number,
-  src: string,
-  club: string,
-  city: string,
-  date: string,
-  slides?: Array<Record<'src', string>>
-}
 
 export default function PhotoGallery() {
   const [openGallery, setOpenGallery] = useState<boolean>(false);
@@ -162,7 +154,7 @@ export default function PhotoGallery() {
                       onClick={() => item.slides && clickHandler(index)}
                     />
                   </div>
-                  <p className='text text-2xl font-bold'>{item.club}</p>
+                  <p className='text text-2xl font-bold'>{item.venue}</p>
                   <p className='flex items-center ml-1'>
                     <MapMapper />
                     <span className='ml-2 text-xl md:text-lg'>{item.city}</span>

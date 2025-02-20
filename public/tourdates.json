@@ -2,7 +2,7 @@
     {
     "id": 1,
     "src": "/img/2024_05_31_Brussels_RockClassic/a5b8362d-211b-4e8a-929f-ba6c4945ffe0.JPG",
-    "club": "Rock Classic",
+    "venue": "Rock Classic",
     "city": "Brussels",
     "date": "31/05/2024",
     "slides": [
@@ -17,7 +17,7 @@
   {
     "id": 2,
     "src": "/img/2024_10_19_Brussels_Scotts/c868215e-0a58-4a19-a7c7-67c3625e1cf1.JPG",
-    "club": "Scotts Bar",
+    "venue": "Scotts Bar",
     "city": "Brussels",
     "date": "10/09/2024",
     "slides": [
@@ -34,8 +34,22 @@
   {
     "id": 3,
     "src": "/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png",
-    "club": "RockClassic",
+    "venue": "RockClassic",
     "city": "Brussels",
-    "date": "1/03/2025"
+    "date": "14/03/2025"
+  },
+  {
+    "id": 4,
+    "src": "",
+    "venue": "La Ferme Rose",
+    "city": "Uccle",
+    "date": "29/03/2025"
+  },
+  {
+    "id": 5,
+    "src": "",
+    "venue": "Scott's Bar",
+    "city": "Brussels",
+    "date": "05/04/2025"
   }
 ]
