@@ -31,9 +31,9 @@ export default function ContactUs() {
     '>
       <Image
         className='mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
-        src='/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG'
-        width={750}
-        height={533}
+        src='/img/portraits/portrait3.jpg'
+        height={1980}
+        width={1080}
         alt='Band playing'
       />
       <Container className='flex flex-col overflow-hidden lg:items-end lg:justify-end lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
