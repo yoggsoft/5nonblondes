@@ -14,10 +14,10 @@ export default function ButtonPrimary({...props}):React.ReactNode {
           whitespace-nowrap
           font-bold
           text-base
-          bg-yellow-btn-primary
+          bg-amethyst-primary
           rounded-full
           transition-all
-          hover:bg-yellow-600
+          hover:bg-purple-primary
           `,
         classNameProp
         )

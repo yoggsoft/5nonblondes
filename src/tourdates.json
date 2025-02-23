@@ -1,10 +1,17 @@
 [
     {
-    "id": 1,
-    "src": "/img/2024_05_31_Brussels_RockClassic/a5b8362d-211b-4e8a-929f-ba6c4945ffe0.JPG",
-    "venue": "Rock Classic",
+      "id": 1,
+      "src": "/img/2023_09_29_Brussels_Scotts/2023_09_29_Brussels_Scotts.png",
+      "venue": "Scott's Bar & Kitchen",
+      "city": "Brussels",
+      "date": "09/29/2023"
+    },
+    {
+    "id": 2,
+    "src": "/img/2024_05_31_Brussels_RockClassic/2024_05_31_Brussels_RockClassic.png",
+    "venue": "Rock Classic Bar",
     "city": "Brussels",
-    "date": "31/05/2024",
+    "date": "05/31/2024",
     "slides": [
       { "src": "/img/2024_05_31_Brussels_RockClassic/0f10d2d3-adcb-4320-a0f3-046841033206.JPG" },
       { "src": "/img/2024_05_31_Brussels_RockClassic/38b5d789-2cda-4648-8341-5420201f9fc3.JPG" },
@@ -15,11 +22,11 @@
     ]
   },
   {
-    "id": 2,
-    "src": "/img/2024_10_19_Brussels_Scotts/c868215e-0a58-4a19-a7c7-67c3625e1cf1.JPG",
-    "venue": "Scotts Bar",
+    "id": 3,
+    "src": "/img/2024_10_19_Brussels_Scotts/dee4a61d-67a0-44c1-b715-49b384c3d023.JPG",
+    "venue": "Scott's Bar & Kitchen",
     "city": "Brussels",
-    "date": "10/09/2024",
+    "date": "09/10/2024",
     "slides": [
       { "src": "/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG" },
       { "src": "/img/2024_10_19_Brussels_Scotts/253000c4-c39c-483e-9c74-91d540d46007.JPG" },
@@ -32,24 +39,38 @@
     ]
   },
   {
-    "id": 3,
-    "src": "/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png",
-    "venue": "RockClassic",
-    "city": "Brussels",
-    "date": "14/03/2025"
-  },
-  {
-    "id": 4,
+    "id": 5,
     "src": "",
     "venue": "La Ferme Rose",
     "city": "Uccle",
-    "date": "29/03/2025"
+    "date": "03/29/2025"
   },
   {
-    "id": 5,
+    "id": 6,
     "src": "",
-    "venue": "Scott's Bar",
+    "venue": "Scott's Bar & Kitchen",
     "city": "Brussels",
-    "date": "05/04/2025"
+    "date": "04/05/2025"
+  },
+  {
+    "id": 7,
+    "src": "/img/2025_02_14_Brussels_RockClassic/2025_02_14_Brussels_RockClassic.png",
+    "venue": "Rock Classic Bar",
+    "city": "Brussels",
+    "date": "02/14/2025"
+  },
+  {
+    "id": 8,
+    "src": "/img/2024_03_23_Brussels_Scotts/2024_03_23_Brussels_Scotts.png",
+    "venue": "Scott's Bar & Kitchen",
+    "city": "Brussels",
+    "date": "03/23/2024"
+  },
+  {
+    "id": 9,
+    "src": "/img/2023_11_23_Brussels_WildGeese/2023_11_23_Brussels_WildGeese.jpg",
+    "venue": "Wild Geese",
+    "city": "Brussels",
+    "date": "11/23/2023"
   }
 ]

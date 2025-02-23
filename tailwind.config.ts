@@ -9,13 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'incoming-shows': 'url("/bb479205-5950-452d-a31a-018929bebd99.jpg")',
-        'hero-pattern': 'url("/pattern.png")',
-      },
-      fontFamily: {
-        permanentMarker: ['Permanent Marker', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
-        rockSalt: ['Rock Salt', 'sans-serif'],
+        'incoming-shows': 'url("/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG")',
       },
       colors: {
         'purple-primary': '#7C7CF5',
@@ -34,7 +28,7 @@ export default {
       },
       animation: {
         slideUp: 'slideUp ease .3s forwards 1.2s',
-      },
+      }
     },
   },
   plugins: [],

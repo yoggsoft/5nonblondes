@@ -1,50 +1,15 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
+import { useRef } from 'react';
+import classNames from 'classnames';
 import { useInView } from 'framer-motion';
 
 import { Container, TourDates } from '@/components';
-import { FaAngleDown as ArrowBottom } from 'react-icons/fa';
 
 export default function Shows() {
-  const [isScrollMoreVisible, setIsScrollMoreVisible] = useState<boolean>(true);
   const showsContainerRef = useRef<HTMLDivElement | null>(null);
   const scrollableDivRef = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(showsContainerRef, { once: true });
-
-  const clickHandler = () => {
-    if (scrollableDivRef.current) {
-      scrollableDivRef.current.scrollTo({
-        top: scrollableDivRef.current.scrollTop + scrollableDivRef.current.offsetHeight,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  useEffect(() => {
-    if (scrollableDivRef.current) {
-      const scrollableDiv = scrollableDivRef.current;
-
-      const handleScroll = () => {
-        if (
-          scrollableDiv.scrollTop + 
-          scrollableDiv.offsetHeight + 
-          (scrollableDiv.firstElementChild?.firstElementChild as HTMLElement).offsetHeight >= 
-          scrollableDiv.scrollHeight
-        ) {
-          setIsScrollMoreVisible(false);
-        } else {
-          setIsScrollMoreVisible(true);
-        }
-      };
-
-      scrollableDiv.addEventListener('scroll', handleScroll);
-      
-      return () => {
-        scrollableDiv.removeEventListener('scroll', handleScroll);
-      };
-    }
-  }, []);
 
   return (
     <section
@@ -61,9 +26,18 @@ export default function Shows() {
         <div className='flex flex-col items-center text-white pt-11'>
           <div className='overflow-hidden'>
             <h2
-              className={`text-2xl translate-y-10 font-bold lg:text-4xl lg:translate-y-20 lg:leading-[3rem] ${
-                isInView ? 'animate-slideUp' : ''
-              }`}
+              className={classNames(
+                'text-2xl',
+                'translate-y-10',
+                'font-bold',
+                'lg:text-4xl',
+                'lg:translate-y-20',
+                'lg:leading-[3rem]',
+                'animate-slideUp',
+                {
+                  'animate-slideUp': isInView
+                }
+              )}
             >
               Incoming Shows 🪩 💃🏽🕺
             </h2>
@@ -74,16 +48,6 @@ export default function Shows() {
           ref={scrollableDivRef}
         >
           <TourDates />
-        </div>
-
-        <div
-          className={`absolute bottom-5 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center transition${
-            !isScrollMoreVisible ? ' opacity-0' : ''
-          }`}
-          onClick={clickHandler}
-        >
-          <p className='text-yellow-btn-primary text-sm underline cursor-pointer'>Show more</p>
-          <ArrowBottom />
         </div>
       </Container>
       <div className='absolute w-full h-full top-0 left-0 bg-hero-pattern bg-repeat z-[-1]'></div>

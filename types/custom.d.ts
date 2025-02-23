@@ -1,4 +1,4 @@
-export type GalleryItem = {
+export type Event = {
   id: number,
   venue: string,
   city: string,
@@ -7,7 +7,4 @@ export type GalleryItem = {
 	url?: string,
   slides?: Array<Record<'src', string>>
 }
-
-
-export type Event = Omit<GalleryItem, 'slides' | 'src'>
 export type EventList = Array<Event>;
