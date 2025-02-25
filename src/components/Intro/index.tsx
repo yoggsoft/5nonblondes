@@ -8,7 +8,24 @@ import classNames from 'classnames';
 import { BandIdentity, BackToTop } from '@/components';
 import './styles.css';
 
-export default function Intro() {
+function SvgBackground (): React.ReactNode {
+  return (
+    <svg className='intro__bokeh fade' viewBox='0 0 10 10' xmlns='http://www.w3.org/2000/svg'>
+      <circle cx='10%' cy='85%' r='75%' />
+      <circle cx='45%' cy='50%' r='15%' />
+      <circle cx='85%' cy='35%' r='30%' />
+      <circle cx='60%' cy='85%' r='20%' />
+      <circle cx='45%' cy='50%' r='30%' />
+      <circle cx='35%' cy='25%' r='20%' />
+      <circle cx='90%' cy='-25%' r='35%' />
+      <circle cx='-15%' cy='30%' r='30%' />
+      <circle cx='65%' cy='85%' r='55%' />
+      <circle cx='45%' cy='50%' r='20%' />
+    </svg>
+  )
+}
+
+export default function Intro(): React.ReactNode {
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
@@ -24,27 +41,9 @@ export default function Intro() {
 
   return (
     <section id='intro' className='intro__section' ref={sectionRef}>
-      <svg className={classNames(
-        'intro__bokeh',
-        'fade',
-        {
-          'hidden': !isInView
-        }
-      )}
-      viewBox='0 0 10 10'
-      xmlns='http://www.w3.org/2000/svg'
-      >
-        <circle cx='10%' cy='85%' r='75%' />
-        <circle cx='45%' cy='50%' r='15%' />
-        <circle cx='85%' cy='35%' r='30%' />
-        <circle cx='60%' cy='85%' r='20%' />
-        <circle cx='45%' cy='50%' r='30%' />
-        <circle cx='35%' cy='25%' r='20%' />
-        <circle cx='90%' cy='-25%' r='35%' />
-        <circle cx='-15%' cy='30%' r='30%' />
-        <circle cx='65%' cy='85%' r='55%' />
-        <circle cx='45%' cy='50%' r='20%' />
-      </svg>
+      {
+        isInView && <SvgBackground />
+      }
       <BandIdentity />
       <h1 className={
         classNames(
