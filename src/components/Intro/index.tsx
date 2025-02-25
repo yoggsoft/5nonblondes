@@ -26,6 +26,7 @@ export default function Intro() {
     <section id='intro' className='intro__section' ref={sectionRef}>
       <svg className={classNames(
         'intro__bokeh',
+        'fade',
         {
           'hidden': !isInView
         }
@@ -57,7 +58,7 @@ export default function Intro() {
         THE BEST <span className='text-amethyst-primary'>DISCO PARTY</span><br />COVER BAND IN BRUSSELS
       </h1>
       <Image
-        className='intro__background-logo z-20'
+        className='intro__background-logo'
         width={1371}
         height={574}
         alt='5NB - 5 Non Blondes logo'

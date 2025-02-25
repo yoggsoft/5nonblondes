@@ -17,8 +17,8 @@
   @apply absolute
     uppercase
     z-50
-    text-4xl
-    md:text-6xl
+    p-5
+    text-6xl
     lg:text-7xl
     xl:text-8xl
     text-white
@@ -39,9 +39,9 @@
 
 .intro__background-logo {
   box-sizing: border-box;
-  /* box-shadow: 0 0em 5em rgba(255, 255, 255, .5); */
-   
+
   @apply
+    z-20
     absolute
     md:hidden
     w-full
@@ -64,6 +64,11 @@
   filter: blur(50px);
   transform: translateZ(0);
   backface-visibility: hidden;
+}
+
+.fade {
+  --fade-amount: 15%;
+  mask-image: linear-gradient(to bottom, black var(--fade-amount), black calc(100% - var(--fade-amount)), transparent)
 }
 
 .intro__bokeh circle {
