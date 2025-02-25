@@ -49,7 +49,7 @@ const Phrase = () => {
         pointer-events-none
       text-white'
       >
-        5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDESS&nbsp;-&nbsp;
+        5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;
       </p>
     </div>
   );
