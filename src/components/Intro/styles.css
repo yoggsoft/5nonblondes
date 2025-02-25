@@ -1,0 +1,121 @@
+.intro__section {
+  @apply relative
+    flex
+    flex-col
+    items-center
+    h-[100svh]
+    w-full
+    overflow-hidden
+    max-h-[93rem]
+    min-h-[43rem]
+    lg:h-screen
+    lg:flex-row
+    lg:justify-start
+}
+
+.intro__hero-title {
+  @apply absolute
+    uppercase
+    z-50
+    text-4xl
+    md:text-6xl
+    lg:text-7xl
+    xl:text-8xl
+    text-white
+    font-bold
+    left-0
+    shadow-sm
+    italic
+    text-center
+    translate-y-[500px]
+    bottom-20
+    w-full;
+    text-shadow: 0 0em .1em rgba(255, 255, 255, .5);
+}
+
+.intro__background-image {
+  @apply object-cover w-full h-full z-10 mix-blend-multiply max-md:hidden;
+}
+
+.intro__background-logo {
+  box-sizing: border-box;
+  /* box-shadow: 0 0em 5em rgba(255, 255, 255, .5); */
+   
+  @apply
+    absolute
+    md:hidden
+    w-full
+    max-w-[600px]
+    h-auto
+    p-5
+    top-[50%]
+    -translate-y-[75%]
+}
+
+.intro__bokeh {
+  height: 100vh;
+  width: 100vw;
+  background-color: #6418f7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(50px);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.intro__bokeh circle {
+  animation: rotate 6s linear infinite;
+  fill: #fff;
+  opacity: 0.43;
+  transform-origin: 50%;
+}
+.intro__bokeh circle:nth-child(2n) {
+  fill: #7d70f6;
+  transform-origin: 20% 110%;
+  animation-delay: -3s;
+  animation-duration: 4.1316s;
+  opacity: 0.2;
+}
+.intro__bokeh circle:nth-child(3n) {
+  opacity: 0.65;
+  fill: #D100FF;
+  transform-origin: 70% 30%;
+  animation-delay: -1.5s;
+  animation-duration: 7.9998s;
+}
+.intro__bokeh circle:nth-child(4n) {
+  fill: #ec22f6;
+  transform-origin: 110% 70%;
+  animation-delay: -2s;
+  animation-duration: 4.77996s;
+}
+.intro__bokeh circle:nth-child(5n) {
+  fill: #b2b1f5;
+  transform-origin: 30% 40%;
+}
+.intro__bokeh circle:nth-child(6n) {
+  fill: #b82df7;
+  transform-origin: -10% 80%;
+  animation-delay: -7.8s;
+}
+.intro__bokeh circle:nth-child(7n) {
+  fill: #7d70f6;
+  transform-origin: 70% -10%;
+}
+.intro__bokeh circle:nth-child(8n) {
+  fill: #ec22f6;
+  transform-origin: -30% 50%;
+  animation-delay: -2.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

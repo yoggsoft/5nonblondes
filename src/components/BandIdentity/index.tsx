@@ -17,7 +17,7 @@ export default function BandIdentity() {
         z-10
         flex
       '>
-        <Container className='flex items-center justify-between backdrop-blur-2xl p-6 w-full min-w-full'>
+        <Container className='flex items-center justify-between backdrop-blur-lg p-6 w-full min-w-full'>
           <div className='flex items-center gap-4'>
             <Image
               className='max-w-[6rem] md:max-w-[10rem] h-auto hover:'
