@@ -18,7 +18,7 @@
     uppercase
     z-50
     p-5
-    text-6xl
+    text-4xl
     lg:text-7xl
     xl:text-8xl
     text-white
@@ -30,7 +30,10 @@
     translate-y-[500px]
     bottom-20
     w-full;
-    text-shadow: 0 0em .1em rgba(255, 255, 255, .5);
+}
+  
+.shine {
+  text-shadow: 0 0em .1em rgba(255, 255, 255, .5);
 }
 
 .intro__background-image {
@@ -49,7 +52,7 @@
     h-auto
     p-5
     top-[50%]
-    -translate-y-[75%]
+    -translate-y-[80%]
 }
 
 .intro__bokeh {

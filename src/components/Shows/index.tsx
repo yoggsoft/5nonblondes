@@ -14,7 +14,21 @@ export default function Shows() {
   return (
     <section
       id='shows'
-      className='w-full relative mt-16 bg-incoming-shows bg-cover bg-no-repeat bg-center h-[32rem] lg:h-screen lg:min-h-[45rem] lg:max-h-[49rem] lg:mt-56'
+      className='
+        fade
+        w-full
+        relative
+        mt-16
+        bg-incoming-shows
+        bg-cover
+        bg-no-repeat
+        bg-center
+        h-[32rem]
+        lg:h-screen
+        lg:min-h-[45rem]
+        lg:max-h-[49rem]
+        lg:mt-56
+      '
       style={{
         transform: isInView ? 'none' : 'translateY(100px)',
         opacity: isInView ? 1 : 0,
@@ -27,13 +41,13 @@ export default function Shows() {
           <div className='overflow-hidden'>
             <h2
               className={classNames(
-                'text-2xl',
+                'text-4xl',
                 'translate-y-10',
                 'font-bold',
-                'lg:text-4xl',
+                'lg:text-6xl',
                 'lg:translate-y-20',
-                'lg:leading-[3rem]',
                 'animate-slideUp',
+                'shine',
                 {
                   'animate-slideUp': isInView
                 }
@@ -50,7 +64,15 @@ export default function Shows() {
           <TourDates />
         </div>
       </Container>
-      <div className='absolute w-full h-full top-0 left-0 bg-hero-pattern bg-repeat z-[-1]'></div>
+      <div className='
+        absolute
+        w-full
+        h-full
+        top-0
+        left-0
+        bg-hero-pattern
+        bg-repeat z-[-1]
+      '></div>
     </section>
   );
 }

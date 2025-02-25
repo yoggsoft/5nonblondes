@@ -54,10 +54,11 @@ export default function PhotoGallery() {
           <h2
             className={classNames(
               'font-bold',
-              'text-3xl',
+              'text-4xl',
               'lg:text-6xl',
               'pb-6',
               'translate-y-24',
+              'shine',
               {
                 ['animate-slideUp']: isInView
               }
@@ -104,12 +105,17 @@ export default function PhotoGallery() {
                     )}
                   >
                     <Image
-                      className='
-                        transition-all
-                        w-full
-                        min-h-full
-                        object-cover
-                      '
+                      className={classNames(
+                        'transition-all',
+                        'duration-300',
+                        'w-full',
+                        'min-h-full',
+                        'object-cover',
+                        'grayscale',
+                        {
+                          ['hover:scale-125']: item.slides
+                        }
+                      )}
                       src={item.src}
                       width={720}
                       height={1280}

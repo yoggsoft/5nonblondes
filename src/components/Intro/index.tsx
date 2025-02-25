@@ -40,19 +40,25 @@ export default function Intro(): React.ReactNode {
   }, [isInView]);
 
   return (
-    <section id='intro' className='intro__section' ref={sectionRef}>
+    <section
+      id='intro'
+      className='intro__section'
+      ref={sectionRef}
+    >
       {
         isInView && <SvgBackground />
       }
       <BandIdentity />
-      <h1 className={
-        classNames(
-          'intro__hero-title',
-          {
-            ['animate-slideUp']: isInView
-          }
-        )
-      }
+      <h1
+        className={
+          classNames(
+            'intro__hero-title',
+            'shine',
+            {
+              ['animate-slideUp']: isInView
+            }
+          )
+        }
       >
         THE BEST <span className='text-amethyst-primary'>DISCO PARTY</span><br />COVER BAND IN BRUSSELS
       </h1>

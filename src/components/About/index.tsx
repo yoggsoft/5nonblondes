@@ -17,24 +17,23 @@ export default function About() {
     >
       <Container className='lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div
-          className='relative flex flex-col lg:max-w-md xl:max-w-2xl 2xl:max-w-4xl'
+          className='relative flex flex-col lg:max-w-md xl:max-w-xl 2xl:max-w-3xl'
           ref={textRef}
           style={{
             transform: isInView ? 'none' : 'translateX(-100px)',
-            opacity: isInView ? 1 : 0,
-            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+            opacity: isInView ? 1 : 0
           }}>
           <div className='overflow-hidden'>
             <h2
-              className={`uppercase italic font-bold text-6xl pb-6 translate-y-20 text-white font-permanentMarker ${
+              className={`uppercase italic font-bold text-6xl pb-6 translate-y-20 text-white font-permanentMarker shine ${
                 isInView ? 'animate-slideUp' : ''
               }`}>
               About
             </h2>
           </div>
 
-          <p className='text-3xl pb-6 text-white'>
-            We are a lively party cover band, based in <strong className='text-purple-primary btn-primary no-underline underline-offset-4 hover:text-amethyst-primary'>
+          <p className='text-2xl lg:text-3xl pb-6 text-white px-4'>
+            We are a lively party cover band, based in <strong className='text-amethyst-primary btn-primary no-underline underline-offset-4 hover:text-amethyst-primary'>
               Brussels
             </strong>, who bring a burst of energy to every performance.
             With a diverse mix of classic rock, pop, and dance hits from the 70, 80 90s and 00.
