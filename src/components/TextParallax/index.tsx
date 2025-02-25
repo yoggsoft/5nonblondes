@@ -40,7 +40,10 @@ const Phrase = () => {
     <div>
       <p className='
         font-robotoCondensed
-        text-[5rem]
+        text-[2rem]
+        md:text-[2rem]
+        lg:text-[3rem]
+        xl:text-[4rem]
         leading-none
         overflow-hidden
         uppercase
@@ -49,7 +52,7 @@ const Phrase = () => {
         pointer-events-none
       text-white'
       >
-        5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDES&nbsp;-&nbsp;5NONBLONDESS&nbsp;-&nbsp;
+        5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;5 NON BLONDES&nbsp;-&nbsp;
       </p>
     </div>
   );
