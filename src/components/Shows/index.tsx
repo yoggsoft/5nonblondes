@@ -58,7 +58,7 @@ export default function Shows() {
           </div>
         </div>
         <div
-          className='scoller relative mt-6 h-[calc(100%-14rem)] overflow-hidden overflow-y-auto no-scrollbar'
+          className='scoller relative mt-6 h-[calc(100%-14rem)] no-scrollbar'
           ref={scrollableDivRef}
         >
           <TourDates />
@@ -71,6 +71,8 @@ export default function Shows() {
         top-0
         left-0
         bg-hero-pattern
+        backdrop-blur-sm
+        grayscale
         bg-repeat z-[-1]
       '></div>
     </section>
