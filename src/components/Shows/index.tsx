@@ -71,6 +71,8 @@ export default function Shows() {
         top-0
         left-0
         bg-hero-pattern
+        backdrop-blur-sm
+        grayscale
         bg-repeat z-[-1]
       '></div>
     </section>

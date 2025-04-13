@@ -77,7 +77,7 @@ export default function PhotoGallery() {
         '>
           {
             tourDates.map((item, index) => {
-              return (
+              return item.src && (
                 <div
                   key={item.id}
                   className='

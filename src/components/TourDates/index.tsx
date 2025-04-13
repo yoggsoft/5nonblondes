@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import moment from 'moment';
 import classNames from 'classnames';
-import Image from 'next/image';
 
 import sortDate from '@/app/util/sortDate';
 import rawTourDates from '@/tourdates.json';
@@ -17,7 +16,7 @@ export default function TourDates(): React.ReactNode {
     const upcomingEvents = sortedDates.filter(i => new Date() < new Date(i.date))
     setTourDates(upcomingEvents);
   }, []);
-  console.log(tourDates)
+
   return (
     tourDates.length > 1
       ? (
@@ -126,15 +125,14 @@ const TourDatesEmptyState = () => {
           'shine',
         )}
       >
-        Thanks for joining us over the past few months <br /><br /> See you all very soon!
+        <br />
+        Thanks for vibing with us these past few months!<br /><br />
+        
+        We don’t have any more shows lined up for now, but we’ll be back with more.
+        <br />
+        <br />
+        See you real soon!<br />
       </p>
-      <Image
-        className='m-auto w-min-[300px] mt-24'
-        src='/img/5nb-see-you-soon.webp'
-        alt='5nb'
-        width={750}
-        height={563}
-      />
     </div>
   )
 }

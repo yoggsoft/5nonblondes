@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'incoming-shows': 'url("/img/2024_10_19_Brussels_Scotts/120535c2-cb26-4479-bbc3-fff4a57a1419.JPG")',
+        'incoming-shows': 'url("/img/5nb-see-you-soon.webp")',
       },
       colors: {
         'purple-primary': '#7C7CF5',
