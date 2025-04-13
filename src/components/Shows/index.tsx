@@ -58,7 +58,7 @@ export default function Shows() {
           </div>
         </div>
         <div
-          className='scoller relative mt-6 h-[calc(100%-14rem)] overflow-hidden overflow-y-auto no-scrollbar'
+          className='scoller relative mt-6 h-[calc(100%-14rem)] no-scrollbar'
           ref={scrollableDivRef}
         >
           <TourDates />

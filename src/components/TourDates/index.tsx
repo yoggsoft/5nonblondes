@@ -1,13 +1,13 @@
 'use client';
 import { useEffect, useState } from 'react';
 import moment from 'moment';
+import classNames from 'classnames';
+import Image from 'next/image';
 
 import sortDate from '@/app/util/sortDate';
 import rawTourDates from '@/tourdates.json';
 
 import type { Event, EventList } from '../../../types/custom';
-
-
 
 export default function TourDates(): React.ReactNode {
   const [tourDates, setTourDates ] = useState<EventList>([]);
@@ -17,14 +17,20 @@ export default function TourDates(): React.ReactNode {
     const upcomingEvents = sortedDates.filter(i => new Date() < new Date(i.date))
     setTourDates(upcomingEvents);
   }, []);
-
+  console.log(tourDates)
   return (
-    <ul className='list-none'>
-      {tourDates.map(gig => (
-        <TourDateItem key={gig.id} gig={gig} />
-      ))}
-    </ul>
-  );
+    tourDates.length > 1
+      ? (
+        <ul className='list-none'>
+          {
+            tourDates.map(gig => (
+              <TourDateItem key={gig.id} gig={gig} />
+            ))
+          }
+        </ul>
+      )
+      : <TourDatesEmptyState />
+  )
 }
 
 const TourDateItem = ({gig}: {gig: Event} ) => {
@@ -102,5 +108,33 @@ const TourDateItem = ({gig}: {gig: Event} ) => {
         </div>
       </div>
     </li>
+  )
+}
+
+const TourDatesEmptyState = () => {
+  return (
+    <div className='text-center placeholder-opacity-100'>
+      <p
+        className={classNames(
+          'text-2xl',
+          'translate-y-10',
+          'font-bold',
+          'text-white',
+          'lg:text-4xl',
+          'lg:translate-y-20',
+          'animate-slideUp',
+          'shine',
+        )}
+      >
+        Thanks for joining us over the past few months <br /><br /> See you all very soon!
+      </p>
+      <Image
+        className='m-auto w-min-[300px] mt-24'
+        src='/img/5nb-see-you-soon.webp'
+        alt='5nb'
+        width={750}
+        height={563}
+      />
+    </div>
   )
 }
