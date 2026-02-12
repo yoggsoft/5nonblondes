@@ -13,7 +13,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56'
+      className='relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56 mb-[4rem] pb-[4em]'
     >
       <Container className='lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div
@@ -28,15 +28,14 @@ export default function About() {
               className={`uppercase italic font-bold text-6xl pb-6 translate-y-20 text-white font-permanentMarker shine ${
                 isInView ? 'animate-slideUp' : ''
               }`}>
-              About
+              The Band
             </h2>
           </div>
 
           <p className='text-2xl lg:text-3xl pb-6 text-white px-4'>
-            We are a lively party cover band, based in <strong className='text-amethyst-primary btn-primary no-underline underline-offset-4 hover:text-amethyst-primary'>
-              Brussels
-            </strong>, who bring a burst of energy to every performance.
-            With a diverse mix of classic rock, pop, and dance hits from the 70, 80 90s and 00.
+            <strong>In the mood for dancing?</strong><br /><br />From classic rock to pop anthems and dance hits — we&apos;ve got it covered. We keep your guests entertained from the first song to the very last encore.<br /><br />
+Our repertoire blends timeless favourites with the latest chart-toppers, and it&apos;s constantly updated to match the energy of every event.<br /><br />
+            <a href="">Discover our band</a>
           </p>
           
           <div className='flex pt-8 gap-4 items-center'>

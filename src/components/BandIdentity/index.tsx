@@ -27,6 +27,13 @@ export default function BandIdentity() {
               alt='Footer logo'
             />
             <h1 className='text-4xl uppercase font-bold text-white hidden md:flex'>5 NON BLONDES</h1>
+            <div className='flex text-white gap-4'>
+              <a href="about">ABOUT</a>
+              <a href="videos">VIDEOS</a>
+              <a href="gallery">GALLERY</a>
+              <a href="event">EVENTS</a>
+              <a href="contact">CONTACT US</a>
+            </div>
           </div>
           <div className='flex gap-4'>
             <a
