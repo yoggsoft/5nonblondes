@@ -2,9 +2,9 @@ import Image from 'next/image';
 import { Container } from '@/components';
 import { FaTiktok, FaInstagram, FaFacebookSquare } from 'react-icons/fa';
 
-export default function   Footer() {
+export default function Footer() {
   return (
-    <section id='footer' className='
+    <footer id='footer' className='
       bg-charcoal-primary
       w-full
       h-[6rem]
@@ -13,7 +13,7 @@ export default function   Footer() {
       lg:z-[-1]
       lg:h-[8rem]
     '>
-      <footer className='w-full'>
+      <div className='w-full'>
         <div className='relative z-[100]'>
           <Container className='flex justify-between items-center py-2 lg:py-4'>
             <Image
@@ -47,19 +47,7 @@ export default function   Footer() {
               </a>
             </div>
           </Container>
-          <Container className='
-            text-xs
-            flex
-            justify-center
-            md:justify-end
-            leading-none
-            py-2
-            lg:py-4
-          text-white
-            uppercase
-            italic
-
-          '>
+          <Container className='text-xs flex justify-center md:justify-end leading-none py-2 lg:py-4 text-white uppercase italic'>
             <span className='flex gap-2'>
               <span>
                 Site&nbsp;by&nbsp;
@@ -88,7 +76,7 @@ export default function   Footer() {
             </span>
           </Container>
         </div>
-      </footer>
-    </section>
+      </div>
+    </footer>
   );
 }

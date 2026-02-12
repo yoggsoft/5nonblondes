@@ -1,58 +1,5 @@
-.intro__section {
-  @apply relative
-    flex
-    flex-col
-    items-center
-    h-[100svh]
-    w-full
-    overflow-hidden
-    max-h-[93rem]
-    min-h-[43rem]
-    lg:h-screen
-    lg:flex-row
-    lg:justify-start
-}
-
-.intro__hero-title {
-  @apply absolute
-    uppercase
-    z-50
-    p-5
-    text-4xl
-    lg:text-7xl
-    xl:text-8xl
-    text-white
-    font-bold
-    left-0
-    shadow-sm
-    italic
-    text-center
-    translate-y-[500px]
-    bottom-20
-    w-full;
-}
-  
 .shine {
   text-shadow: 0 0em .1em rgba(255, 255, 255, .5);
-}
-
-.intro__background-image {
-  @apply object-cover w-full h-full z-10 mix-blend-multiply max-md:hidden;
-}
-
-.intro__background-logo {
-  box-sizing: border-box;
-
-  @apply
-    z-20
-    absolute
-    md:hidden
-    w-full
-    max-w-[600px]
-    h-auto
-    p-5
-    top-[50%]
-    -translate-y-[80%]
 }
 
 .intro__bokeh {

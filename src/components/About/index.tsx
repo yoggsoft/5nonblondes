@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { Container } from '@/components';
-import { FaTiktok, FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { FaTiktok, FaFacebookSquare, FaInstagram, FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function About() {
   const textRef = useRef(null);
@@ -13,7 +14,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='relative flex flex-col items-center justify-end w-full mt-16 mx-auto max-w-[150rem] lg:flex-row lg:mt-56'
+      className='relative flex flex-col items-center justify-end w-full my-16 mx-auto max-w-[150rem] lg:flex-row lg:my-48 pb-[4em]'
     >
       <Container className='lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div
@@ -28,18 +29,17 @@ export default function About() {
               className={`uppercase italic font-bold text-6xl pb-6 translate-y-20 text-white font-permanentMarker shine ${
                 isInView ? 'animate-slideUp' : ''
               }`}>
-              About
+              The Band
             </h2>
           </div>
 
           <p className='text-2xl lg:text-3xl pb-6 text-white px-4'>
-            We are a lively party cover band, based in <strong className='text-amethyst-primary btn-primary no-underline underline-offset-4 hover:text-amethyst-primary'>
-              Brussels
-            </strong>, who bring a burst of energy to every performance.
-            With a diverse mix of classic rock, pop, and dance hits from the 70, 80 90s and 00.
+            <strong>In the mood for dancing?</strong><br /><br />From classic rock to pop anthems and dance hits — we&apos;ve got it covered. We keep your guests entertained from the first song to the very last encore.<br /><br />
+Our repertoire blends timeless favourites with the latest chart-toppers, and it&apos;s constantly updated to match the energy of every event.<br /><br />
+            <Link href="/about" className='flex items-center gap-4'><span>Discover our band</span> <FaArrowRight /></Link>
           </p>
           
-          <div className='flex pt-8 gap-4 items-center'>
+          <div className='flex px-8 pt-8 gap-4 items-center'>
             <a
               className="hover:text-amethyst-primary text-white"
               href="https://www.instagram.com/5nblondes"

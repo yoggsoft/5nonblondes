@@ -2,9 +2,6 @@ import {
   Intro,
   About,
   TextParallax,
-  PhotoGallery,
-  Footer,
-  Shows
 } from '@/components';
 
 export default function Home() {
@@ -14,10 +11,6 @@ export default function Home() {
         <Intro />
         <TextParallax />
         <About />
-        <Shows />
-        <TextParallax />
-        <PhotoGallery />
-        <Footer />
       </main>
     </>
   );

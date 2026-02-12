@@ -120,8 +120,6 @@ const TourDatesEmptyState = () => {
           'font-bold',
           'text-white',
           'lg:text-4xl',
-          'lg:translate-y-20',
-          'animate-slideUp',
           'shine',
         )}
       >
