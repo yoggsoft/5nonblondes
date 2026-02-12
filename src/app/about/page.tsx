@@ -13,7 +13,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='relative flex flex-col items-center justify-end w-full my-16 mx-auto max-w-[150rem] lg:flex-row lg:my-48 pb-[4em]'
+      className='relative flex flex-col items-center justify-end w-full mx-auto max-w-[150rem] lg:flex-row lg:mt-56 mb-[rem] pb-[4em]'
     >
       <Container className='lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div

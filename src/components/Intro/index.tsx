@@ -5,7 +5,7 @@ import { useInView } from 'framer-motion';
 import Image from 'next/image';
 import classNames from 'classnames';
 
-import { BandIdentity, BackToTop } from '@/components';
+import { BackToTop } from '@/components';
 import './styles.css';
 
 function SvgBackground (): React.ReactNode {
@@ -42,21 +42,17 @@ export default function Intro(): React.ReactNode {
   return (
     <section
       id='intro'
-      className='relative flex flex-col items-center h-[100svh] w-full overflow-hidden max-h-[93rem] min-h-[43rem] lg:h-screen lg:flex-row lg:justify-start'
+      className='relative flex flex-col items-center h-[100vh] w-full overflow-hidden max-h-[93rem] min-h-[43rem] lg:h-screen lg:flex-row lg:justify-start'
       ref={sectionRef}
     >
       {
         isInView && <SvgBackground />
       }
-      <BandIdentity />
       <h1
         className={
           classNames(
-            'absolute uppercase z-50 p-5 text-4xl lg:text-7xl xl:text-8xl text-white font-bold left-0 shadow-sm italic text-center translate-y-[500px] bottom-20 w-full',
+            'absolute uppercase z-50 p-5 text-4xl lg:text-7xl xl:text-8xl text-white font-bold left-0 shadow-sm italic text-center top-1/2 -translate-y-1/2 bottom-20 w-full',
             'shine',
-            {
-              ['animate-slideUp']: isInView
-            }
           )
         }
       >

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
 import './globals.css';
+import { Header, Footer } from '@/components';
 
 const robotoCondensed = Roboto_Condensed({
   weight: ['300', '400', '700'],
@@ -58,7 +59,13 @@ export default function RootLayout({
         <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={`${robotoCondensed.className}`}>
-        {children}
+        <div className='flex flex-col'>
+          <Header />
+          <main className='bg-background-primary mb-32'>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

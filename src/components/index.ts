@@ -1,6 +1,6 @@
 export { default as About } from '@/components/About';
 export { default as BackToTop } from '@/components/BackToTop';
-export { default as BandIdentity } from '@/components/BandIdentity';
+export { default as Header } from '@/components/Header';
 export { default as ButtonPrimary } from '@/components/ButtonPrimary';
 export { default as ContactUs } from '@/components/ContactUs';
 export { default as Container } from '@/components/Container';
