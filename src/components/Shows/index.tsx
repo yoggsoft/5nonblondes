@@ -18,16 +18,15 @@ export default function Shows() {
         fade
         w-full
         relative
-        mt-16
+        mt-8
         bg-incoming-shows
         bg-cover
         bg-no-repeat
         bg-center
-        h-[32rem]
         lg:h-screen
         lg:min-h-[45rem]
         lg:max-h-[49rem]
-        lg:mt-56
+        lg:mt-20
       '
       style={{
         transform: isInView ? 'none' : 'translateY(100px)',
@@ -37,26 +36,6 @@ export default function Shows() {
       ref={showsContainerRef}
     >
       <Container className='pb-2.5 h-full'>
-        <div className='flex flex-col items-center text-white pt-11'>
-          <div className='overflow-hidden'>
-            <h2
-              className={classNames(
-                'text-4xl',
-                'translate-y-10',
-                'font-bold',
-                'lg:text-6xl',
-                'lg:translate-y-20',
-                'animate-slideUp',
-                'shine',
-                {
-                  'animate-slideUp': isInView
-                }
-              )}
-            >
-              Incoming Shows 🪩 💃🏽🕺
-            </h2>
-          </div>
-        </div>
         <div
           className='scoller relative mt-6 h-[calc(100%-14rem)] no-scrollbar'
           ref={scrollableDivRef}

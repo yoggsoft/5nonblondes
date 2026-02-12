@@ -4,7 +4,8 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 import { Container } from '@/components';
-import { FaTiktok, FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import { FaTiktok, FaFacebookSquare, FaInstagram, FaArrowRight } from 'react-icons/fa';
+import Link from 'next/link';
 
 export default function About() {
   const textRef = useRef(null);
@@ -35,10 +36,10 @@ export default function About() {
           <p className='text-2xl lg:text-3xl pb-6 text-white px-4'>
             <strong>In the mood for dancing?</strong><br /><br />From classic rock to pop anthems and dance hits — we&apos;ve got it covered. We keep your guests entertained from the first song to the very last encore.<br /><br />
 Our repertoire blends timeless favourites with the latest chart-toppers, and it&apos;s constantly updated to match the energy of every event.<br /><br />
-            <a href="">Discover our band</a>
+            <Link href="/about" className='flex items-center gap-4'><span>Discover our band</span> <FaArrowRight /></Link>
           </p>
           
-          <div className='flex pt-8 gap-4 items-center'>
+          <div className='flex px-8 pt-8 gap-4 items-center'>
             <a
               className="hover:text-amethyst-primary text-white"
               href="https://www.instagram.com/5nblondes"
