@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Roboto_Condensed } from 'next/font/google';
-import './globals.css';
 import { Header, Footer } from '@/components';
+
+import './globals.css';
 
 const robotoCondensed = Roboto_Condensed({
   weight: ['300', '400', '700'],
@@ -61,7 +62,7 @@ export default function RootLayout({
       <body className={`${robotoCondensed.className}`}>
         <div className='flex flex-col'>
           <Header />
-          <main className='bg-background-primary mb-32'>
+          <main className='bg-background-primary lg:mb-32'>
             {children}
           </main>
           <Footer />

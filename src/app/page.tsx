@@ -2,7 +2,6 @@ import {
   Intro,
   About,
   TextParallax,
-  Footer,
 } from '@/components';
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
         <TextParallax />
         <About />
       </main>
-      <Footer />
     </>
   );
 }

@@ -22,9 +22,9 @@ export default function Header() {
           <h1 className='text-4xl uppercase font-bold text-white hidden md:flex'>5 NON BLONDES</h1>
           <div className='flex text-white gap-4'>
             <Link href="/about">ABOUT</Link>
-            {/* <Link href="videos">VIDEOS</Link> */}
-            <Link href="gallery">GALLERY</Link>
-            <Link href="event">EVENTS</Link>
+            {/* <Link href="/" className='pointer-envents-none'>VIDEOS(soon)</Link>
+            <Link href="/" className='pointer-envents-none'>GALLERY(soon)</Link> */}
+            <Link href="events">EVENTS</Link>
             <Link href="contact">CONTACT US</Link>
           </div>
         </div>

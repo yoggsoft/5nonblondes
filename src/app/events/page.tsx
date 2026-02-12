@@ -13,7 +13,7 @@ import rawTourDates from '@/tourdates.json';
 import 'yet-another-react-lightbox/styles.css';
 import { EventList } from '../../../types/custom';
 
-export default function Gallery() {
+export default function Events() {
   const [openGallery, setOpenGallery] = useState<boolean>(false);
   const [galleryIndex, setGalleryIndex] = useState<number>(0);
   const [tourDates, setTourDates ] = useState<EventList>([]);
@@ -43,25 +43,18 @@ export default function Gallery() {
       ref={sectionRef}
     >
       <Container>
-        <div className='flex flex-col items-center text-white pt-11'>
-          <div className='overflow-hidden'>
-            <h2
-              className={classNames(
-                'text-4xl',
-                'translate-y-10',
-                'font-bold',
-                'lg:text-6xl',
-                'lg:translate-y-20',
-                'animate-slideUp',
-                'shine',
-                {
-                  'animate-slideUp': isInView
-                }
-              )}
-            >
-                Incoming Shows 🪩 💃🏽🕺
-            </h2>
-          </div>
+        <div className='flex justify-center'>
+          <h2
+            className={classNames(
+              'text-4xl',
+              'font-bold',
+              'lg:text-6xl',
+              'shine',
+            )}
+          >
+              Incoming Shows 🪩 💃🏽🕺
+          </h2>
+
         </div>
         <Shows />
         <div className='overflow-hidden mt-40'>
