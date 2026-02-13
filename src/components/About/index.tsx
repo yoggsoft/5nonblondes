@@ -14,7 +14,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='relative flex flex-col items-center justify-end w-full my-16 mx-auto max-w-[150rem] lg:flex-row lg:my-48 pb-[4em]'
+      className='relative flex flex-col-reverse items-center justify-end w-full my-16 mx-auto max-w-[150rem] lg:flex-row lg:my-48 pb-[4em]'
     >
       <Container className='lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
         <div
@@ -65,7 +65,7 @@ Our repertoire blends timeless favourites with the latest chart-toppers, and it&
         </div>
       </Container>
       <Image
-        className='w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
+        className='w-full my-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
         src='/img/portraits/portrait2.jpg'
         width={750}
         height={533}
