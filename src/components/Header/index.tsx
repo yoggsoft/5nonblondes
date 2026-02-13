@@ -19,7 +19,7 @@ export default function Header() {
               alt='Footer logo'
             />
           </Link>
-          <h1 className='text-4xl uppercase font-bold text-white hidden md:flex'>5 NON BLONDES</h1>
+          <h1 className='text-4xl uppercase font-bold text-white hidden lg:flex'>5 NON BLONDES</h1>
           <div className='flex text-white gap-4'>
             <Link href="/about">ABOUT</Link>
             {/* <Link href="/" className='pointer-envents-none'>VIDEOS(soon)</Link>

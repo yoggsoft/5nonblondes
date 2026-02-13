@@ -14,11 +14,11 @@ export default function About() {
   return (
     <section
       id='about'
-      className='relative flex flex-col items-center justify-end w-full mx-auto max-w-[150rem] lg:flex-row lg:mt-56 mb-[rem] pb-[4em] px-8'
+      className='mt-24 gap-8 relative flex flex-col-reverse items-center justify-end w-full mx-auto max-w-[150rem] 2xl:flex-row pb-[4em] px-8'
     >
       <Container className='px-12'>
         <div
-          className='relative flex flex-col lg:max-w-md xl:max-w-xl 2xl:max-w-3xl'
+          className='relative flex flex-col '
           ref={textRef}
           style={{
             transform: isInView ? 'none' : 'translateX(-100px)',
@@ -33,20 +33,20 @@ export default function About() {
             <p className='py-2'>
               Since 2021, 5 Nonblondes has been dedicated to making every event unique.
             </p>
-            <p className='py-2'>
+            <p className='py-2 text-right'>
               We&apos;re a versatile live band with a carefully curated repertoire that spans genres and decades — always tailored to fit the mood and energy of the occasion.
 Dynamics 6-piece ensemble featuring Drums, Bass, Guitar, Keyboard and a talented duo of vocalists!
             </p>
             <p className='py-2'>
               From weddings and private parties to corporate events and public celebrations, we bring professionalism, adaptability, and a genuine care for detail. Every set is prepared with your audience in mind, so the music not only sounds right but feels right.
             </p>
-            <p className='py-2'>
+            <p className='py-2 text-right'>
               You can take this to the next level by adding additional vocalists or musicians like saxophone or trumpet enriching the band pieces.
             </p>
             <p className='py-2'>
               Our approach is simple: understand your vision, translate it into sound, and deliver a performance that creates the atmosphere you want — whether that&apos;s elegant and intimate or vibrant and full of energy.
             </p>
-            <p className='py-2 text-center'>
+            <p className='py-2 text-right'>
               <strong>
                 5 Non Blondes
               </strong><br />more than music, the right soundtrack for your moments.
@@ -87,7 +87,7 @@ Dynamics 6-piece ensemble featuring Drums, Bass, Guitar, Keyboard and a talented
         </div>
       </Container>
       <Image
-        className='w-full mt-5 max-h-96 object-cover lg:mt-0 lg:max-h-none lg:max-w-lg lg:block xl:max-w-3xl'
+        className='w-full object-cover'
         src='/img/portraits/portrait3.jpg'
         width={750}
         height={533}
