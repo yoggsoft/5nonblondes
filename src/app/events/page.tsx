@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import moment from 'moment';
 import Lightbox from 'yet-another-react-lightbox';
 import Image from 'next/image';
@@ -16,15 +16,11 @@ import { EventList } from '../../../types/custom';
 export default function Events() {
   const [openGallery, setOpenGallery] = useState<boolean>(false);
   const [galleryIndex, setGalleryIndex] = useState<number>(0);
-  const [tourDates, setTourDates ] = useState<EventList>([]);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
 
-  useEffect(() => {
-    const sortedDates: EventList = sortDate(rawTourDates, 'asc');
-    const pastEvents = sortedDates.filter(i => new Date() > new Date(i.date))
-    setTourDates(pastEvents);
-  }, []);
+  const sortedDates: EventList = sortDate(rawTourDates, 'asc');
+  const tourDates = sortedDates.filter(i => new Date() > new Date(i.date));
 
   const clickHandler = (index: number) => {
     setOpenGallery(true);

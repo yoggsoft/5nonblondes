@@ -1,5 +1,4 @@
 'use client';
-import { useEffect, useState } from 'react';
 import moment from 'moment';
 import classNames from 'classnames';
 
@@ -9,13 +8,8 @@ import rawTourDates from '@/tourdates.json';
 import type { Event, EventList } from '../../../types/custom';
 
 export default function TourDates(): React.ReactNode {
-  const [tourDates, setTourDates ] = useState<EventList>([]);
-
-  useEffect(() => {
-    const sortedDates: EventList = sortDate(rawTourDates, 'asc');
-    const upcomingEvents = sortedDates.filter(i => new Date() < new Date(i.date))
-    setTourDates(upcomingEvents);
-  }, []);
+  const sortedDates: EventList = sortDate(rawTourDates, 'asc');
+  const tourDates = sortedDates.filter(i => new Date() < new Date(i.date));
 
   return (
     tourDates.length > 1

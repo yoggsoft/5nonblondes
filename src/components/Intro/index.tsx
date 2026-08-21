@@ -31,12 +31,17 @@ export default function Intro(): React.ReactNode {
   const isInView = useInView(sectionRef, { once: true });
 
   useEffect(() => {
-    const { scrollY } = window;
-    if (scrollY > 50 && !isInView) {
-      setIsScrollTopVisible(true);
-    } else {
-      setIsScrollTopVisible(false);
-    }
+    const handleScroll = () => {
+      if (window.scrollY > 50 && !isInView) {
+        setIsScrollTopVisible(true);
+      } else {
+        setIsScrollTopVisible(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [isInView]);
 
   return (
