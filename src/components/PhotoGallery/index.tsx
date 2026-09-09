@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import moment from 'moment';
 import Lightbox from 'yet-another-react-lightbox';
 import Image from 'next/image';
@@ -16,15 +16,11 @@ import { EventList } from '../../../types/custom';
 export default function PhotoGallery() {
   const [openGallery, setOpenGallery] = useState<boolean>(false);
   const [galleryIndex, setGalleryIndex] = useState<number>(0);
-  const [tourDates, setTourDates ] = useState<EventList>([]);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true });
 
-  useEffect(() => {
-    const sortedDates: EventList = sortDate(rawTourDates, 'asc');
-    const pastEvents = sortedDates.filter(i => new Date() > new Date(i.date))
-    setTourDates(pastEvents);
-  }, []);
+  const sortedDates: EventList = sortDate(rawTourDates, 'asc');
+  const tourDates = sortedDates.filter(i => new Date() > new Date(i.date));
 
   const clickHandler = (index: number) => {
     setOpenGallery(true);
@@ -77,7 +73,37 @@ export default function PhotoGallery() {
         '>
           {
             tourDates.map((item, index) => {
-              return item.src && (
+              if (!item.src) return null;
+
+              const imageDescription = `${item.venue}, ${item.city} — ${moment(item.date).format('DD MMMM YYYY')}`;
+              const imageClassName = classNames(
+                'transition-all',
+                'duration-300',
+                'w-full',
+                'min-h-full',
+                'object-cover',
+                'grayscale',
+                {
+                  ['group-hover:scale-125']: item.slides
+                }
+              );
+              const wrapperClassName = classNames(
+                'w-full',
+                'mb-2',
+                'lg:mb-4',
+                'rounded-lg',
+                'transition-all',
+                'overflow-hidden',
+                'border-transparent',
+                'border-4',
+                'rounded-lg',
+                'h-[500px]',
+                {
+                  'group hover:border-purple-primary cursor-pointer': item.slides,
+                }
+              );
+
+              return (
                 <div
                   key={item.id}
                   className='
@@ -87,42 +113,36 @@ export default function PhotoGallery() {
                     leading-none
                   '
                 >
-                  <div
-                    className={classNames(
-                      'w-full',
-                      'mb-2',
-                      'lg:mb-4',
-                      'rounded-lg',
-                      'transition-all',
-                      'overflow-hidden',
-                      'border-transparent',
-                      'border-4',
-                      'rounded-lg',
-                      'h-[500px]',
-                      {
-                        'hover:border-purple-primary cursor-pointer': item.slides,
-                      }
-                    )}
-                  >
-                    <Image
-                      className={classNames(
-                        'transition-all',
-                        'duration-300',
-                        'w-full',
-                        'min-h-full',
-                        'object-cover',
-                        'grayscale',
-                        {
-                          ['hover:scale-125']: item.slides
-                        }
-                      )}
-                      src={item.src}
-                      width={720}
-                      height={1280}
-                      alt='Gallery gig thumbnail'
-                      onClick={() => item.slides && clickHandler(index)}
-                    />
-                  </div>
+                  {
+                    item.slides
+                      ? (
+                        <button
+                          type='button'
+                          className={wrapperClassName}
+                          onClick={() => clickHandler(index)}
+                          aria-label={`Open photo gallery for ${item.venue}, ${item.city}`}
+                        >
+                          <Image
+                            className={imageClassName}
+                            src={item.src}
+                            width={720}
+                            height={1280}
+                            alt={imageDescription}
+                          />
+                        </button>
+                      )
+                      : (
+                        <div className={wrapperClassName}>
+                          <Image
+                            className={imageClassName}
+                            src={item.src}
+                            width={720}
+                            height={1280}
+                            alt={imageDescription}
+                          />
+                        </div>
+                      )
+                  }
                   <p className='text text-2xl font-bold'>{item.venue}</p>
                   <p className='flex items-center ml-1'>
                     <MapMapper />

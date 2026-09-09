@@ -22,7 +22,7 @@ const Slide = ({
   const translateX = useTransform(progress, [0, 1], [200 * moveDirection, -200 * moveDirection]);
 
   return (
-    <motion.div style={{ x: translateX, left: left }} className='relative flex whitespace-nowrap'>
+    <motion.div style={{ x: translateX, left: left }} className='parallax-slide relative flex whitespace-nowrap'>
       <Phrase />
       <Phrase />
       <Phrase />

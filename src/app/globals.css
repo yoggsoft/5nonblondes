@@ -79,3 +79,31 @@ h1, h2, h3, h4 {
     background-size: 100% 4px;
   }
 }
+
+/* Respect the user's reduced-motion preference: keep every scroll/in-view
+   reveal effect functional, but show the resting state instantly instead
+   of animating into it. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.visible {
+    transition: none;
+  }
+
+  .animate-slideUp {
+    animation: none !important;
+    transform: translateY(0) !important;
+  }
+
+  .parallax-slide {
+    transform: none !important;
+  }
+
+  /* Every scroll-reveal wrapper in this app shares this exact transition
+     value (see the `Shows`, `ContactUs`, `Listen`, `PhotoGallery`,
+     `TextParallax`, etc. components), so it doubles as a reliable hook. */
+  [style*='cubic-bezier(0.17, 0.55, 0.55, 1)'] {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

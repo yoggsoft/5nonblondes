@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef } from 'react';
-import classNames from 'classnames';
 import { useInView } from 'framer-motion';
 
 import { Container, TourDates } from '@/components';

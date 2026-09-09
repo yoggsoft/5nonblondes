@@ -13,8 +13,8 @@ export default function Contact() {
 
   return (
     <section
-      id='about'
-      className='relative flex flex-col items-center justify-end w-full mx-auto max-w-[150rem] lg:flex-row lg:mt-56 mb-[rem] pb-[4em] px-8'
+      id='contact'
+      className='mt-24 relative flex flex-col items-center justify-end w-full mx-auto max-w-[150rem] lg:flex-row lg:mt-56 mb-8 pb-[4em] px-8'
     >
       <Container className='px-12'>
         <div
@@ -29,17 +29,17 @@ export default function Contact() {
             className='uppercase italic font-bold text-6xl pb-6 text-white font-permanentMarker shine'>
             GET IN TOUCH
           </h1>
-          <div className='text-2xl lg:text-3xl pb-6 text-white px-4'>
+          <div className='flex items-center gap-4 text-2xl lg:text-3xl pb-6 text-white px-4'>
             <Link href="mailto:5nonblondesmusicband@gmail.com">Get in touch!</Link>
-            <a href="tel:+32491592032 "><FaPhone className='text-2xl lg:text-4xl' /></a>
+            <a href="tel:+32491592032" aria-label="Call 5 Non Blondes"><FaPhone className='text-2xl lg:text-4xl' /></a>
           </div>
 
           <div className='flex flex-col pt-8 gap-4 items-center justify-center'>
             <div className='flex items-center text-white gap-8'>
-              Follow us: 
+              Follow us:
               <Link
                 className="hover:text-amethyst-primary text-white"
-                href="https://www.instagram.com/5nblondes"
+                href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
                 aria-label="Follow 5 Non Blondes on Facebook"
               >
                 <FaFacebookSquare className='text-2xl lg:text-4xl' />

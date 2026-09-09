@@ -18,7 +18,7 @@ const ScrollTo = ({
     return scrollTo({ id: toId, ref: toRef, duration });
   };
 
-  return <div onClick={handleClick}>{children}</div>;
+  return <button type='button' className='contents' onClick={handleClick}>{children}</button>;
 };
 
 export default ScrollTo;
