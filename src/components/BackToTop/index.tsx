@@ -9,9 +9,11 @@ export default function BackToTop({...props}):React.ReactNode {
       behavior: 'smooth',
     });
   };
-  
+
   return (
-    <div
+    <button
+      type='button'
+      aria-label='Back to top'
       className={
         classNames(
           'fixed',
@@ -34,6 +36,6 @@ export default function BackToTop({...props}):React.ReactNode {
       onClick={clickHandler}
     >
       <FaArrowUp />
-    </div>
+    </button>
   );
 }

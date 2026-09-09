@@ -56,10 +56,10 @@ Dynamics 6-piece ensemble featuring Drums, Bass, Guitar, Keyboard and a talented
 
           <div className='flex flex-col pt-8 gap-4 items-center justify-center'>
             <div className='flex items-center text-white gap-8'>
-              Follow us: 
+              Follow us:
               <Link
                 className="hover:text-amethyst-primary text-white"
-                href="https://www.instagram.com/5nblondes"
+                href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
                 aria-label="Follow 5 Non Blondes on Facebook"
               >
                 <FaFacebookSquare className='text-2xl lg:text-4xl' />
@@ -81,7 +81,7 @@ Dynamics 6-piece ensemble featuring Drums, Bass, Guitar, Keyboard and a talented
             </div>
             <div className='text-white items-center flex gap-4'>
               <Link href="mailto:5nonblondesmusicband@gmail.com">Get in touch!</Link>
-              <a href="tel:+32491592032 "><FaPhone className='text-2xl lg:text-4xl' /></a>
+              <a href="tel:+32491592032" aria-label="Call 5 Non Blondes"><FaPhone className='text-2xl lg:text-4xl' /></a>
             </div>
           </div>
         </div>

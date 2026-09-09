@@ -60,9 +60,9 @@ export default function RootLayout({
         <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </head>
       <body className={`${robotoCondensed.className}`}>
-        <div className='flex flex-col'>
+        <div className='min-h-screen flex flex-col'>
           <Header />
-          <main className='bg-background-primary lg:mb-32'>
+          <main className='flex-1 bg-background-primary'>
             {children}
           </main>
           <Footer />

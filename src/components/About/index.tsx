@@ -42,7 +42,7 @@ Our repertoire blends timeless favourites with the latest chart-toppers, and it&
           <div className='flex px-8 pt-8 gap-4 items-center'>
             <a
               className="hover:text-amethyst-primary text-white"
-              href="https://www.instagram.com/5nblondes"
+              href="https://www.facebook.com/people/5NonBlondes-5NB/61550656681487/?sk=about"
               aria-label="Follow 5 Non Blondes on Facebook"
             >
               <FaFacebookSquare className='text-2xl lg:text-4xl' />
